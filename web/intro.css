@@ -2,9 +2,55 @@ table, th, td {
     border: 2px solid blue;
 }
 h1 {
-	color:#FF1100;
+	color:#EE1100;
 	text-align: center;
 }
 body {
-	background-color:#33aa99;
+	background-color:#3399EE;
+}
+.alist{
+	text-align:center;
+}
+ul{
+	font-size:160%;
+}
+li{
+	text-decoration: none;
+}
+.left {
+    position:fixed;
+    left:0; top:0px; bottom: 0;
+    width: 100px;
+}
+.main {
+    position: absolute;
+    left:150px; top:25px; right:0; bottom:0;
+}
+
+.leftbar {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 150px;
+    height: 100%;
+    overflow: hidden;
+    background-color:#111111;
+}
+
+.leftlist a {
+	display: block;
+    color: white;
+	width: 100%;
+    font-size:14px;
+    padding: 6px 6px;
+    text-decoration: none;
+}
+
+.leftlist a:hover {
+    background-color: #555;
+    color: white;
+}
+
+.active {
+    background-color:#33aaDD;
 }

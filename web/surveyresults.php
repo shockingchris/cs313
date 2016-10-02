@@ -39,7 +39,10 @@
 			//print_r($_POST);
 			
 			//Survey questions: 
-			$_SESSION['taken'] = 0;
+			if(!isset($_SESSION['taken'])){
+				$_SESSION['taken'] = 0;
+			}
+			
 			//set default values
 			if (isset($_POST['submit'])) {
 				$name = isset($_POST['name']) ? $_POST['name'] : "";
@@ -58,7 +61,7 @@
 				$comment = "";
 			}
 			
-			if ($_SESSION['taken'] == 0){
+			if ($_SESSION['taken'] == 0 && (!isset($_SESSION['name']))){
 				$_SESSION['name'] = $name;
 				$_SESSION['phone'] = $phone;
 				$_SESSION['happy'] = $happy;

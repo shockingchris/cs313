@@ -10,22 +10,24 @@
 <div class="main">
 <h1>Salesman Information</h1>
 
+<?php include 'queries.php';?>
+
 <table class="responstable">
   
   <tr>
     <th>Salesperson</th>
     <th>Calls (15)</th>
     <th>Appointments (15)</th>
-	<th></th>
+	<th>Deals (15)</th>
   </tr>
-  <?php $user1->query('SELECT name FROM salesman WHERE user_id=1') ?>
+  
   <tr>
     <td><?php echo "$user1";?></td>
     <td></td>
     <td>Salesman</td>
 	<td>Yes</td>
   </tr>
-  
+
   <tr>
     <td><?php $db->query('SELECT name FROM salesman WHERE user_id=1')?></td>
     <td>01/01/1985</td>

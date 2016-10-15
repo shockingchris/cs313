@@ -2,7 +2,13 @@
 try {
  $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
 
-	$user1->query('SELECT name FROM salesman WHERE user_id=1');
+}
+catch (PDOException $ex) {
+	print "<p>error: $ex->getMessage() </p>\n\n";
+	die();
+}
+
+$user1= $db->query('SELECT name FROM salesman WHERE user_id=1');
 	
 	foreach ($db->query('SELECT name FROM salesman') as $row)
 	{
@@ -16,9 +22,4 @@ try {
 		echo '<strong>' . $row['info'] . '</strong>';
 		echo '</p>';
 	}
-}
-catch (PDOException $ex) {
-	print "<p>error: $ex->getMessage() </p>\n\n";
-	die();
-}
 ?>

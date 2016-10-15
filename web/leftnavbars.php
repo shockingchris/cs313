@@ -1,8 +1,8 @@
 <?php
     echo'<ul class="leftbar">';
     echo'<li class="leftlist"><a class="active">Assignments Page</a></li>';
-    echo'<li class="leftlist"><a href="survey.php">Week 02</a></li>';
-	echo'<li class="leftlist"><a>Week 03</a></li>';
+    echo'<li class="leftlist"><a href="survey.php">Survey</a></li>';
+	echo'<li class="leftlist"><a href="sales.php" class="active">Sales table</a></li>';
 	echo'<li class="leftlist"><a>Week 04</a></li>';
 	echo'<li class="leftlist"><a>Week 05</a></li>';
 	echo'<li class="leftlist"><a>Week 06</a></li>';

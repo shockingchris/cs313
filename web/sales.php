@@ -32,6 +32,12 @@ try {
 		echo '<strong>' . $row['name'] . '</strong>';
 		echo '</p>';
 	}
+	foreach ($db->query('SELECT info FROM deal') as $row)
+	{
+		echo '<p>';
+		echo '<strong>' . $row['info'] . '</strong>';
+		echo '</p>';
+	}
 }
 catch (PDOException $ex) {
 	print "<p>error: $ex->getMessage() </p>\n\n";

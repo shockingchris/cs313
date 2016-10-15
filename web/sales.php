@@ -22,7 +22,7 @@
   </tr>
   
   <tr>
-    <td><?php echo "$user1";?></td>
+    <td><?php echo "{$user1}";?></td>
     <td></td>
     <td>Salesman</td>
 	<td>Yes</td>

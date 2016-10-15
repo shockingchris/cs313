@@ -10,16 +10,16 @@ catch (PDOException $ex) {
 
 $user1= $db->query('SELECT name FROM salesman WHERE user_id=1');
 	
-	foreach ($db->query('SELECT name FROM salesman') as $row)
-	{
-		echo '<p>';
-		echo '<strong>' . $row['name'] . '</strong>';
-		echo '</p>';
-	}
-	foreach ($db->query('SELECT info FROM deal') as $row)
-	{
-		echo '<p>';
-		echo '<strong>' . $row['info'] . '</strong>';
-		echo '</p>';
-	}
+	// foreach ($db->query('SELECT name FROM salesman') as $row)
+	// {
+		// echo '<p>';
+		// echo '<strong>' . $row['name'] . '</strong>';
+		// echo '</p>';
+	// }
+	// foreach ($db->query('SELECT info FROM deal') as $row)
+	// {
+		// echo '<p>';
+		// echo '<strong>' . $row['info'] . '</strong>';
+		// echo '</p>';
+	// }
 ?>

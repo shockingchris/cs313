@@ -2,6 +2,8 @@
 try {
  $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
 
+	$user1->query('SELECT name FROM salesman WHERE user_id=1');
+	
 	foreach ($db->query('SELECT name FROM salesman') as $row)
 	{
 		echo '<p>';

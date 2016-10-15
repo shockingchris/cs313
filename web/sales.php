@@ -3,10 +3,8 @@
 	<link rel="stylesheet" href="intro.css"/>
 </head>
 <body>
-
-<?php
-	include '/navbars.php';
-?>
+<div class="top"><?php include '/topnavbars.php';?></div>
+<div class="left"><?php include '/leftnavbars.php';?></div>
 <div class="main">
 <h1>Salesman Information</h1>
 <?php

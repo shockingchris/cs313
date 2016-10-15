@@ -29,7 +29,7 @@
   </tr>
 
   <tr>
-    <td><?php $db->query('SELECT name FROM salesman WHERE user_id=1')?></td>
+    <td>Jeff Simmons</td>
     <td>01/01/1985</td>
     <td>Salesman</td>
 	<td>Yes</td>
@@ -51,7 +51,6 @@
   
 </table>
 
-<?php include 'queries.php';?>
 </div>
 </body>
 </html>

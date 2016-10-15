@@ -1,6 +1,6 @@
 <html>
 <head>
-	<link rel="stylesheet" href="intro.css"/>
+	<link rel="stylesheet" href="/intro.css"/>
 </head>
 <body>
 <div class="top"><?php include '/topnavbars.php';?></div>

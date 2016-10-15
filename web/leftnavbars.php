@@ -1,5 +1,4 @@
 <?php
-<link rel="stylesheet" href="intro.css"/>
     <ul class="leftbar">
         <li class="leftlist"><a class="active">Assignments Page</a></li>
         <li class="leftlist"><a href="survey.php">Week 02</a></li>

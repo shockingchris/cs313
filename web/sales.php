@@ -8,6 +8,7 @@
 <div class="left"><?php include 'leftnavbars.php';?></div>
 <div class="main">
 <h1>Salesman Information</h1>
+<?php include 'queries.php';?>
 </div>
 </body>
 </html>

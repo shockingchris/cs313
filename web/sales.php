@@ -18,9 +18,9 @@
     <th>Appointments (15)</th>
 	<th></th>
   </tr>
-  
+  <?php $user1->query('SELECT name FROM salesman WHERE user_id=1') ?>
   <tr>
-    <td><?php echo "$db->query('SELECT name FROM salesman WHERE user_id=1')";?></td>
+    <td><?php echo "$user1";?></td>
     <td></td>
     <td>Salesman</td>
 	<td>Yes</td>

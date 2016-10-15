@@ -20,7 +20,7 @@
   </tr>
   
   <tr>
-    <td><?php $db->query('SELECT name FROM salesman WHERE user_id=1')?></td>
+    <td><?php echo "$db->query('SELECT name FROM salesman WHERE user_id=1')";?></td>
     <td></td>
     <td>Salesman</td>
 	<td>Yes</td>

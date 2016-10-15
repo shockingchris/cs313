@@ -4,6 +4,8 @@
 </head>
 <body>
 
+<?php include 'navbars.php';?>
+
 <h1>Salesman Information</h1>
 <?php
 
@@ -63,6 +65,6 @@ SELECT * FROM call JOIN salesman ON salesman.id=call.user_id
 WHERE salesman.name='Joel Simmons';
 */
 ?>
-
+</div>
 </body>
 </html>

@@ -5,7 +5,7 @@
 <body>
 
 <?php
-	include "navbars.php";
+	include '/navbars.php';
 ?>
 <div class="main">
 <h1>Salesman Information</h1>

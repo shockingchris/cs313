@@ -24,6 +24,4 @@
 			<li class="leftlist"><a>Week 13</a></li>
         </ul>
     </div>
-    <div class="main">
-
 ?>

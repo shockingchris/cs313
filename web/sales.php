@@ -4,8 +4,8 @@
 </head>
 <body>
 
-<?php include 'navbars.php';?>
-
+<?php include 'navbars.php'; ?>
+<div class="main">
 <h1>Salesman Information</h1>
 <?php
 

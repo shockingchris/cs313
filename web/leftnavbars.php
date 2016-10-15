@@ -1,5 +1,5 @@
 <?php
-    <ul class="leftbar">
+    echo'<ul class="leftbar">
         <li class="leftlist"><a class="active">Assignments Page</a></li>
         <li class="leftlist"><a href="survey.php">Week 02</a></li>
 		<li class="leftlist"><a>Week 03</a></li>
@@ -13,5 +13,5 @@
 		<li class="leftlist"><a>Week 11</a></li>
 		<li class="leftlist"><a>Week 12</a></li>
 		<li class="leftlist"><a>Week 13</a></li>
-    </ul>
+    </ul>';
 ?>

@@ -23,9 +23,9 @@ pointval INT NOT NULL,
 user_id INT REFERENCES salesman(id)
 );
 
-INSERT INTO salesman
+INSERT INTO salesman(name)
 VALUES ('Joel Simmons');
-INSERT INTO salesman
+INSERT INTO salesman(name)
 VALUES ('Jeff Simmons');
 
 INSERT INTO deal (info, pointval, user_id)

@@ -29,7 +29,7 @@ try {
 	foreach ($db->query('SELECT name FROM salesman') as $row)
 	{
 		echo '<p>';
-		echo '<strong>' . $row['name'];
+		echo '<strong>' . $row['name'] . '</strong>';
 		echo '</p>';
 	}
 }

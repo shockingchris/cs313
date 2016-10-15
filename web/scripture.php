@@ -32,7 +32,7 @@ try {
 		echo '<p>';
 		echo '<strong>' . $row['book'] . ' ' . $row['chapter'] . ':';
 		echo $row['verse'] . '<strong>' . ' - ' . $row['content'];
-		echo '</p>\n';
+		echo '</p>';
 	}
 }
 catch (PDOException $ex) {

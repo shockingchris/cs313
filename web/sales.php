@@ -17,13 +17,11 @@
     <th>Calls (15)</th>
     <th>Appointments (15)</th>
 	<th>Deals (15)</th>
+	<th>Total</th>
   </tr>
   
   <tr>
     <?php include 'queries.php';?>
-    <td>Yes</td>
-    <td>Yes</td>
-	<td>Yes</td>
   </tr>
 
   <tr>

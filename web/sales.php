@@ -20,7 +20,7 @@
   </tr>
   
   <tr>
-    <td><?php include 'queries.php';?></td>
+    <?php include 'queries.php';?>
     <td>Yes</td>
     <td>Yes</td>
 	<td>Yes</td>

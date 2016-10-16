@@ -10,8 +10,6 @@
 <div class="main">
 <h1>Salesman Information</h1>
 
-<?php include 'queries.php';?>
-
 <table class="responstable">
   
   <tr>

@@ -49,8 +49,8 @@ See a salesman's sales info: <br/>
 		$salesname = $_POST['salesname'];
 		echo "<br>Information for {$salesname}:<br>";
 		echo "Appointments:<br>";
-		foreach($db->query("SELECT salesman.name, appt.ainfo FROM
-	salesman, appt WHERE salesman.name={$salesname}") as $row)
+		foreach($db->query('SELECT salesman.name, appt.ainfo FROM
+	salesman, appt WHERE salesman.name="$salesname"') as $row)
 		{
 			echo $row['ainfo'] . '<br>';
 		}

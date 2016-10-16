@@ -20,17 +20,8 @@
 	<th>Total</th>
   </tr>
   
-  <tr>
-    <?php include 'queries.php';?>
-  </tr>
+<?php include 'queries.php';?>
 
-  <tr>
-    <td>Jeff Simmons</td>
-    <td>Yes</td>
-    <td>Yes</td>
-	<td>Yes</td>
-  </tr>
-  
   <tr>
     <td>Kelsi Simmons</td>
     <td>Yes</td>

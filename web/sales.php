@@ -48,7 +48,7 @@ Following Salesman available to search info:<br>
 			echo $row['name'] . '<br>';
 		}
 ?>
-See a salesman's sales info: <br/>
+<br>See a salesman's sales info: <br/>
 <input type="text" name="salesname"/><br/>
 <button type="submit" name="submit" value="submit">Submit</button>
 <?php 

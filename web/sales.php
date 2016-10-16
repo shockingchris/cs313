@@ -22,7 +22,7 @@
   
 <?php include 'queries.php';?>
 
-	showtable();
+<?php showtable(); ?>
 
   <tr>
     <td>Kelsi Simmons</td>

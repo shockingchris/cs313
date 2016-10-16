@@ -41,6 +41,13 @@
 </table>
 <br/>
 <form action="" method="POST">
+Following Salesman available to search info:<br>
+<?php
+	foreach($db->query("SELECT name FROM salesman") as $row)
+		{
+			echo $row['name'] . '<br>';
+		}
+?>
 See a salesman's sales info: <br/>
 <input type="text" name="salesname"/><br/>
 <button type="submit" name="submit" value="submit">Submit</button>

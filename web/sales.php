@@ -24,29 +24,29 @@
   <tr>
     <td><?php echo "{$user1}";?></td>
     <td>Yes</td>
-    <td>Salesman</td>
+    <td>Yes</td>
 	<td>Yes</td>
   </tr>
 
   <tr>
     <td>Jeff Simmons</td>
-    <td>01/01/1985</td>
-    <td>Salesman</td>
+    <td>Yes</td>
+    <td>Yes</td>
 	<td>Yes</td>
   </tr>
   
   <tr>
     <td>Kelsi Simmons</td>
-    <td>01/01/1990</td>
-    <td>Saleswoman</td>
-	<td>No</td>
+    <td>Yes</td>
+    <td>Yes</td>
+	<td>Yes</td>
   </tr>
   
   <tr>
     <td>Angie Simmons</td>
-    <td>01/01/1990</td>
-    <td>Saleswoman</td>
-	<td>No</td>
+    <td>Yes</td>
+    <td>Yes</td>
+	<td>Yes</td>
   </tr>
   
 </table>

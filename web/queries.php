@@ -8,14 +8,10 @@ catch (PDOException $ex) {
 	die();
 }
 
-$user1= $db->query('SELECT name FROM salesman WHERE user_id=1');
-	
-	// foreach ($db->query('SELECT name FROM salesman') as $row)
-	// {
-		// echo '<p>';
-		// echo '<strong>' . $row['name'] . '</strong>';
-		// echo '</p>';
-	// }
+foreach ($db->query('SELECT name FROM salesman WHERE name="Joel Simmons"') as $row)
+{
+	echo '$row[name]';
+}
 	// foreach ($db->query('SELECT info FROM deal') as $row)
 	// {
 		// echo '<p>';

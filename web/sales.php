@@ -1,5 +1,4 @@
 <?php include 'dbaccess.php';?>
-<?php include 'queries.php';?>
 <html>
 <head>
 	<link rel="stylesheet" href="/intro.css"/>
@@ -21,7 +20,7 @@
 	<th>Total</th>
   </tr>
 
-<?php showtable(); ?>
+<?php include 'queries.php';?>
 
   <tr>
     <td>Kelsi Simmons</td>
@@ -46,9 +45,28 @@ See a salesman's sales info: <br/>
 <input type="text" name="salesname"/><br/>
 <button type="submit" name="submit" value="submit">Submit</button>
 <?php 
-	//if(isset($_POST['salesname'])){
-	//	showinfo($_POST['salesname']);
-	//}
+	if(isset($_POST['salesname'])){
+		$salesname = $_POST['salesname'];
+		echo "Information for {$salesname}:<br>";
+		echo "Appointments:<br>";
+		foreach($db->query("SELECT salesman.name, appt.ainfo FROM
+		salesman, appt WHERE salesman.name=$salesname") as $row)
+		{
+			echo $row['ainfo'] . '<br>';
+		}
+		echo "<br>Calls:<br>";
+		foreach($db->query("SELECT salesman.name, call.cinfo FROM
+		salesman, call WHERE salesman.name=$salesname") as $row)
+		{
+			echo $row['cinfo'] . '<br>';
+		}
+		echo "<br>Deals Closed:<br>";
+		foreach($db->query("SELECT salesman.name, deal.dinfo FROM
+		salesman, deal WHERE salesman.name=$salesname") as $row)
+		{
+			echo $row['dinfo'] . '<br>';
+		}
+	}
 ?>
 </form>
 </div>

@@ -58,13 +58,13 @@ See a salesman's sales info: <br/>
 		echo "<br>Information for {$salesname}:<br>";
 		echo "Appointments:<br>";
 		foreach($db->query("SELECT salesman.name, appt.ainfo FROM
-	salesman, appt WHERE salesman.name='$salesname'") as $row)
+	salesman INNER JOIN appt ON salesman.id=appt.user_id WHERE salesman.name='$salesname'") as $row)
 		{
 			echo $row['ainfo'] . '<br>';
 		}
 		echo "<br>Calls:<br>";
 		foreach($db->query("SELECT salesman.name, call.cinfo FROM
-		salesman, call WHERE salesman.name='$salesname'") as $row)
+		salesman INNER JOIN call ON salesman.id=call.user_id WHERE salesman.name='$salesname'") as $row)
 		{
 			echo $row['cinfo'] . '<br>';
 		}

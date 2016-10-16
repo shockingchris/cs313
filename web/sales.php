@@ -47,10 +47,10 @@ See a salesman's sales info: <br/>
 <?php 
 	if(isset($_POST['salesname'])){
 		$salesname = $_POST['salesname'];
-		echo "Information for {$salesname}:<br>";
+		echo "<br>Information for {$salesname}:<br>";
 		echo "Appointments:<br>";
 		foreach($db->query("SELECT salesman.name, appt.ainfo FROM
-		salesman, appt WHERE salesman.name=$salesname") as $row)
+	salesman, appt WHERE salesman.name={$salesname}") as $row)
 		{
 			echo $row['ainfo'] . '<br>';
 		}

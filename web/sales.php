@@ -22,6 +22,8 @@
   
 <?php include 'queries.php';?>
 
+	showtable();
+
   <tr>
     <td>Kelsi Simmons</td>
     <td>15</td>
@@ -44,7 +46,11 @@
 See a salesman's sales info: <br/>
 <input type="text" name="salesname"/><br/>
 <button type="submit" name="submit" value="submit">Submit</button>
-<?php print_r($_POST);?>
+<?php 
+	//if(isset($_POST['salesname'])){
+	//	showinfo($_POST['salesname']);
+	//}
+?>
 </form>
 </div>
 </body>

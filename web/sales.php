@@ -1,4 +1,5 @@
 <?php include 'dbaccess.php';?>
+<?php include 'queries.php';?>
 <html>
 <head>
 	<link rel="stylesheet" href="/intro.css"/>
@@ -19,8 +20,6 @@
 	<th>Deals (15)</th>
 	<th>Total</th>
   </tr>
-  
-<?php include 'queries.php';?>
 
 <?php showtable(); ?>
 

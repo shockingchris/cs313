@@ -3,9 +3,9 @@ foreach ($db->query('SELECT salesman.name, appt.pointval, call.pointval, deal.po
 FROM salesman, appt, call, deal LIMIT 2') as $row)
 {
 	echo '<td>' . $row['name'] . '</td>';
-	echo '<td>' . $row['call.pointval'] . '</td>';
-	echo '<td>' . $row['appt.pointval'] . '</td>';
-	echo '<td>' . $row['deal.pointval'] . '</td>';
+	echo '<td>' . $row['pointval'] . '</td>';
+	echo '<td>' . $row['pointval'] . '</td>';
+	echo '<td>' . $row['pointval'] . '</td>';
 }
 SELECT salesman.name, appt.pointval, call.pointval, deal.pointval
 FROM salesman, appt, call, deal LIMIT 2;

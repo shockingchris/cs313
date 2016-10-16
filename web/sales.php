@@ -53,6 +53,7 @@ See a salesman's sales info: <br/>
 <button type="submit" name="submit" value="submit">Submit</button>
 <?php 
 	if(isset($_POST['salesname'])){
+		print_r($_POST);
 		$salesname = $_POST['salesname'];
 		echo "<br>Information for {$salesname}:<br>";
 		echo "Appointments:<br>";
@@ -69,7 +70,7 @@ See a salesman's sales info: <br/>
 		}
 		echo "<br>Deals Closed:<br>";
 		foreach($db->query("SELECT salesman.name, deal.dinfo FROM
-		salesman, deal WHERE salesman.name='$salesname'") as $row)
+		salesman INNER JOIN deal ON salesman.id=deal.user_id WHERE salesman.name='$salesname'") as $row)
 		{
 			echo $row['dinfo'] . '<br>';
 		}

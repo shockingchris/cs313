@@ -49,20 +49,20 @@ See a salesman's sales info: <br/>
 		$salesname = $_POST['salesname'];
 		echo "<br>Information for {$salesname}:<br>";
 		echo "Appointments:<br>";
-		foreach($db->query('SELECT salesman.name, appt.ainfo FROM
-	salesman, appt WHERE salesman.name="$salesname"') as $row)
+		foreach($db->query("SELECT salesman.name, appt.ainfo FROM
+	salesman, appt WHERE salesman.name='$salesname'") as $row)
 		{
 			echo $row['ainfo'] . '<br>';
 		}
 		echo "<br>Calls:<br>";
 		foreach($db->query("SELECT salesman.name, call.cinfo FROM
-		salesman, call WHERE salesman.name=$salesname") as $row)
+		salesman, call WHERE salesman.name='$salesname'") as $row)
 		{
 			echo $row['cinfo'] . '<br>';
 		}
 		echo "<br>Deals Closed:<br>";
 		foreach($db->query("SELECT salesman.name, deal.dinfo FROM
-		salesman, deal WHERE salesman.name=$salesname") as $row)
+		salesman, deal WHERE salesman.name='$salesname'") as $row)
 		{
 			echo $row['dinfo'] . '<br>';
 		}

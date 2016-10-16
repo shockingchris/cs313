@@ -8,7 +8,7 @@ catch (PDOException $ex) {
 	die();
 }
 
-foreach ($db->query('SELECT name FROM salesman WHERE name="Joel Simmons"') as $row)
+foreach ($db->query("SELECT name FROM salesman WHERE name='Joel Simmons'") as $row)
 {
 	echo $row['name'];
 }

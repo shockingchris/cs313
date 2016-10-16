@@ -7,6 +7,7 @@ FROM salesman, appt, call, deal LIMIT 2') as $row)
 	echo '<td>' . $row['callval'] . '</td>';
 	echo '<td>' . $row['apptval'] . '</td>';
 	echo '<td>' . $row['dealval'] . '</td>';
+	echo '<td>' . $row['dealval']+$row['callval']+$row['apptval'] . '</td>';
 	echo '</tr>';
 }
 	// foreach ($db->query('SELECT info FROM deal') as $row)

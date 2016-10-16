@@ -10,7 +10,7 @@ catch (PDOException $ex) {
 
 foreach ($db->query('SELECT name FROM salesman WHERE name="Joel Simmons"') as $row)
 {
-	echo '$row[name]';
+	echo $row['name'];
 }
 	// foreach ($db->query('SELECT info FROM deal') as $row)
 	// {

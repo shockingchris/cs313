@@ -53,7 +53,6 @@ See a salesman's sales info: <br/>
 <button type="submit" name="submit" value="submit">Submit</button>
 <?php 
 	if(isset($_POST['salesname'])){
-		print_r($_POST);
 		$salesname = $_POST['salesname'];
 		echo "<br>Information for {$salesname}:<br>";
 		echo "Appointments:<br>";

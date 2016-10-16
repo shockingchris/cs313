@@ -22,7 +22,7 @@
   </tr>
   
   <tr>
-    <td><?php echo "{$user1}";?></td>
+    <td><?php include 'queries.php';?></td>
     <td>Yes</td>
     <td>Yes</td>
 	<td>Yes</td>

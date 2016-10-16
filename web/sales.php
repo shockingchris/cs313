@@ -24,16 +24,18 @@
 
   <tr>
     <td>Kelsi Simmons</td>
-    <td>Yes</td>
-    <td>Yes</td>
-	<td>Yes</td>
+    <td>15</td>
+    <td>15</td>
+	<td>15</td>
+	<td>45</td>
   </tr>
   
   <tr>
     <td>Angie Simmons</td>
-    <td>Yes</td>
-    <td>Yes</td>
-	<td>Yes</td>
+    <td>15</td>
+    <td>15</td>
+	<td>15</td>
+	<td>45</td>
   </tr>
   
 </table>

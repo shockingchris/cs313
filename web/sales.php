@@ -39,11 +39,13 @@
   </tr>
   
 </table>
-<br/><br/><br/>
+<br/>
+<form action="" method="POST">
 See a salesman's sales info: <br/>
 <input type="text" name="salesname"/><br/>
 <button type="submit" name="submit" value="submit">Submit</button>
-
+<?php print_r($_POST);?>
+</form>
 </div>
 </body>
 </html>

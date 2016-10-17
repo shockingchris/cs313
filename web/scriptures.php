@@ -15,12 +15,14 @@ Enter a new Scripture to add:<br>
 <br/>
 <?php
 
-foreach ($db->query('SELECT book, chapter, verse, content FROM scripture') as $row) {
-	echo "<b>" . $row['book'] . ' ';
+foreach($db->query("SELECT book, chapter, verse, content
+	FROM scripture") as $row){
+	echo '<b>' . $row['book'] . ' ';
 	echo $row['chapter'] . ':';
 	echo $row['verse'] . "</b>";
-	echo " - \"" . $row['content'] . "\"<br><br>";
+	echo ' - \"' . $row['content'] . '\"<br><br>';
 }
+
 ?>
 
 </body>

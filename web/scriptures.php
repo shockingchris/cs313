@@ -14,8 +14,8 @@ Enter a new Scripture to add:<br>
 <br><textarea rows="4" cols="40"></textarea>
 <br/>
 <?php
-
-foreach($db->query("SELECT book, chapter, verse, content FROM scripture") as $row){
+foreach($db->query("SELECT book, chapter, verse, content FROM scripture") as $row)
+{
 	echo '<b>' . $row['book'] . ' ';
 	echo $row['chapter'] . ':';
 	echo $row['verse'] . "</b>";

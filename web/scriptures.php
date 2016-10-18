@@ -24,7 +24,7 @@ foreach($db->query('SELECT name FROM topics') as $row)
 ?>
 <input type='checkbox' name='topics[]' value=''/>
 <input type='text' name='newtopic' size='12' value=''/><br/>
-<button type='submit' name='submit' value='Submit'/>
+<button type='submit' name='submit' value='Submit'>Submit</button>
 </form>
 <?php
 foreach($db->query("SELECT book, chapter, verse, content FROM scripture") as $row)

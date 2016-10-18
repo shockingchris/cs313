@@ -19,7 +19,7 @@ Topics:
 foreach($db->query('SELECT name FROM topics') as $row)
 {
 	echo $row['name'] .
-	"<input type='radio' name='topic[]' value='" .
+	"<input type='checkbox' name='topic[]' value='" .
 	$row['name'] . "'>";
 }
 ?>

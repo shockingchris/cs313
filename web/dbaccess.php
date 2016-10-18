@@ -27,18 +27,4 @@ catch (PDOException $ex) {
 
 //print "<p>pgsql:host=$dbHost;port=$dbPort;dbname=$dbName</p>\n\n";
 
-/*
-SELECT * FROM deal JOIN salesman ON salesman.id=deal.user_id
-WHERE salesman.name='Jeff Simmons';
-SELECT * FROM appt JOIN salesman ON salesman.id=appt.user_id
-WHERE salesman.name='Jeff Simmons';
-SELECT * FROM call JOIN salesman ON salesman.id=call.user_id
-WHERE salesman.name='Jeff Simmons';
-SELECT * FROM deal JOIN salesman ON salesman.id=deal.user_id
-WHERE salesman.name='Joel Simmons';
-SELECT * FROM appt JOIN salesman ON salesman.id=appt.user_id
-WHERE salesman.name='Joel Simmons';
-SELECT * FROM call JOIN salesman ON salesman.id=call.user_id
-WHERE salesman.name='Joel Simmons';
-*/
 ?>

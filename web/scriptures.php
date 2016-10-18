@@ -8,11 +8,22 @@
 <body>
 <h1>Scripture Resources</h1>
 Enter a new Scripture to add:<br>
+<form>
 <input type="text" name="book" size="15"/>
 <input type="text" name="chapter" maxlength="3" size="3"/>
 : <input type="text" name="verse" maxlength="3" size="3"/>
 <br><textarea rows="4" cols="40"></textarea>
 <br/>
+Topics: 
+<?php
+foreach($db->query('SELECT name FROM topics') as $row)
+{
+	echo $row['name'] .
+	"<input type='radio' name='topic[]' value='" .
+	$row['name'] . "'>";
+}
+?>
+</form>
 <?php
 foreach($db->query("SELECT book, chapter, verse, content FROM scripture") as $row)
 {
@@ -23,8 +34,6 @@ foreach($db->query("SELECT book, chapter, verse, content FROM scripture") as $ro
 }
 
 ?>
-
+<!--<script src="ajax.js"-->
 </body>
-</html>   
-
-
+</html>

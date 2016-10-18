@@ -14,15 +14,17 @@ Enter a new Scripture to add:<br>
 : <input type="text" name="verse" maxlength="3" size="3"/>
 <br><textarea rows="4" cols="40"></textarea>
 <br/>
-Topics: 
+Topics:  
 <?php
 foreach($db->query('SELECT name FROM topics') as $row)
 {
-	echo $row['name'] .
-	"<input type='checkbox' name='topic[]' value='" .
-	$row['name'] . "'>";
+	echo "<input type='checkbox' name='topic[]' value='" .
+	$row['name'] . "'>" . " " . $row['name'] ;
 }
 ?>
+<input type='checkbox' name='topics[]' value=''/>
+<input type='text' name='newtopic' size='12' value=''/><br/>
+<button type='submit' name='submit' value='Submit'/>
 </form>
 <?php
 foreach($db->query("SELECT book, chapter, verse, content FROM scripture") as $row)

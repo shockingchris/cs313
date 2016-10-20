@@ -50,6 +50,7 @@
 	echo "<br>$newTopicId";
 	
 	if (!empty($topics)){
+		echo "In the link IF";
 			foreach($topics as $row){
 				$topicId = $db->query('SELECT id FROM topics WHERE name="$row"');
 				echo "<br>$topicId";

@@ -20,8 +20,9 @@
 
 	if(isset($_POST['submit'])){
 		echo "did an insert!";
-		$db->query('INSERT INTO scripture(book, chapter, verse, content)
-						VALUES("$book", "$chapter", "$verse", "$content");');
+		$db->query("INSERT INTO scripture(book, chapter, verse, content)
+						VALUES($book, $chapter, $verse, $content)");
+		echo "{$book} "	
 		}
 ?>
 <html>
@@ -49,7 +50,7 @@ foreach($db->query('SELECT name FROM topics') as $row)
 ?>
 <input type='checkbox' name='topics[]' value=''/>
 <input type='text' name='newtopic' size='12' value=''/><br/>
-<button type='submit' name='submit' value='Submit'>Submit</button>
+<button type='submit' name='submit' value='submit'>Submit</button>
 </form>
 <?php
 foreach($db->query("SELECT book, chapter, verse, content FROM scripture") as $row)

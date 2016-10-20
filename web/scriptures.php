@@ -34,7 +34,7 @@ Enter a new Scripture to add:<br>
 <input type="text" name="book" size="15"/>
 <input type="text" name="chapter" maxlength="3" size="3"/>
 : <input type="text" name="verse" maxlength="3" size="3"/>
-<br><textarea rows="4" cols="40"></textarea>
+<br><textarea name="content" rows="4" cols="40"></textarea>
 <br/>
 Topics:  <br>
 <?php

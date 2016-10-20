@@ -51,7 +51,7 @@
 
 <?php
 foreach ($db->query('SELECT salesman.name, appt.apptval, call.callval, deal.dealval
-FROM salesman, appt, call, deal LIMIT 3') as $row)
+FROM salesman, appt, call, deal LIMIT 2') as $row)
 {
 	echo '<tr>';
 	echo '<td>' . $row['name'] . '</td>';

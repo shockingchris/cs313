@@ -7,7 +7,8 @@
 		$chapter = isset($_POST['chapter']) ? $_POST['chapter'] : ''; 
 		$verse = isset($_POST['verse']) ? $_POST['verse'] : ''; 
 		$content = isset($_POST['content']) ? $_POST['content'] : '';
-		$topics = isset($_POST['topics']) ? $_POST['topics'] : ''; 
+		$topics = isset($_POST['topics']) ? $_POST['topics'] : '';
+		$newtopic = isset($_POST['newtopic']) ? $_POST['newtopic'] : '';
 	}
 	else{
 		echo "didn't submit";
@@ -16,6 +17,7 @@
 		$verse ='';
 		$content='';
 		$topics='';
+		$newtopic='';
 	}
 
 	if(isset($_POST['submit'])){
@@ -34,7 +36,6 @@
 	echo "<br>$newId";
 		
 	if(isset($_POST['newtopic'])){
-		$newtopic = isset($_POST['newtopic']) ? $_POST['newtopic'] : '';
 		$stmt = $db->prepare("INSERT INTO topics(name)
 						VALUES(:name)");
 		$stmt->bindParam(":name", $newtopic, PDO::PARAM_STR, 100);
@@ -43,7 +44,7 @@
 	
 	$newTopicId = $db->lastInsertId();
 	
-	echo "<br>$newTopicsId";
+	echo "<br>$newTopicId";
 ?>
 <html>
 <head>

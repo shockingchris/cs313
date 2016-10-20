@@ -20,8 +20,8 @@
 
 	if(isset($_POST['submit'])){
 		echo "did an insert!";
-		$db->query("INSERT INTO scripture(book, chapter, verse, content)
-						VALUES($book, $chapter, $verse, $content)");
+		$db->query('INSERT INTO scripture(book, chapter, verse, content)
+						VALUES("$book", "$chapter", "$verse", "$content")');
 		echo "{$book} "	
 		}
 ?>

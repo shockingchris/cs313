@@ -38,7 +38,7 @@
 	
 	echo "<br>$newId";
 		
-	if($_POST['newtopic']!='')){
+	if($_POST['newtopic']!=''){
 		$stmt = $db->prepare("INSERT INTO topics(name)
 						VALUES(:name)");
 		$stmt->bindParam(":name", $newtopic, PDO::PARAM_STR, 100);

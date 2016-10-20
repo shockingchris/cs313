@@ -1,8 +1,8 @@
 <?php include 'dbaccess.php';?>
 <?php
-	print_r($_POST);
+	//print_r($_POST);
 	if(isset($_POST['submit'])){
-		echo "We made it submit!";
+		//echo "We made it submit!";
 		$book = isset($_POST['book']) ? $_POST['book'] : '';
 		$chapter = isset($_POST['chapter']) ? $_POST['chapter'] : ''; 
 		$verse = isset($_POST['verse']) ? $_POST['verse'] : ''; 
@@ -11,7 +11,7 @@
 		$newtopic = isset($_POST['newtopic']) ? $_POST['newtopic'] : '';
 	}
 	else{
-		echo "didn't submit";
+		//echo "didn't submit";
 		$book = '';
 		$chatper ='';
 		$verse ='';
@@ -23,7 +23,7 @@
 	}
 
 	if(isset($_POST['submit'])){
-		echo "did an insert!";
+		//echo "did an insert!";
 		$stmt = $db->prepare("INSERT INTO scripture(book, chapter, verse, content)
 						VALUES(:book, :chapter, :verse, :content)");
 		$stmt->bindParam(":book", $book, PDO::PARAM_STR, 100);
@@ -36,7 +36,7 @@
 	
 	$newId = $db->lastInsertId();
 	
-	echo "<br>$newId";
+	//echo "<br>$newId";
 		
 	if($_POST['newtopic']!=''){
 		$stmt = $db->prepare("INSERT INTO topics(name)
@@ -47,19 +47,19 @@
 	
 	$newTopicId = $db->lastInsertId();
 	
-	echo "<br>$newTopicId";
+	//echo "<br>$newTopicId";
 	
 	if (!empty($topics)){
-		echo "In the link IF";
+		//echo "In the link IF";
 			foreach($topics as $row){
-				echo "in the link FOREACH $row";
+				//echo "in the link FOREACH $row";
 				$topicId = $db->query("SELECT id FROM topics WHERE name='$row'");
 				$stmt = $db->prepare("INSERT INTO link(scripture_id, topics_id)
 				VALUES(:scripture_id, :topics_id)");
 				$stmt->bindParam(":scripture_id", $newId, PDO::PARAM_INT);
 				$stmt->bindParam(":topics_id", $topicId, PDO::PARAM_INT);
 				$stmt->execute();
-				echo "<br>$topicId";
+				//echo "<br>$topicId";
 				}
 	}
 ?>

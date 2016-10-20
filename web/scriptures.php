@@ -1,5 +1,6 @@
 <?php include 'dbaccess.php';?>
 <?php
+	print_r($_POST);
 	if(isset($_POST['submit'])){
 		$book = isset($_POST['book']) ? $_POST['book'] : '';
 		$chapter = isset($_POST['chapter']) ? $_POST['chapter'] : ''; 

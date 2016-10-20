@@ -1,5 +1,6 @@
 <?php include 'dbaccess.php';?>
 <?php
+	echo "<br><br>";
 	print_r($_POST);
 	if(isset($_POST['submit'])){
 		//echo "We made it submit!";
@@ -25,7 +26,7 @@
 		$stmt->execute();
 	}
 	
-	$newTopicId = $db->lastInsertId();
+	$newPersonId = $db->lastInsertId();
 ?>
 <html>
 <head>
@@ -50,7 +51,7 @@
 
 <?php
 foreach ($db->query('SELECT salesman.name, appt.apptval, call.callval, deal.dealval
-FROM salesman, appt, call, deal LIMIT 2') as $row)
+FROM salesman, appt, call, deal LIMIT 3') as $row)
 {
 	echo '<tr>';
 	echo '<td>' . $row['name'] . '</td>';

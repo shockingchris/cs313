@@ -27,12 +27,23 @@
 		$stmt->bindParam(":verse", $verse, PDO::PARAM_INT);
 		$stmt->bindParam(":content", $content, PDO::PARAM_STR, 100);
 		$stmt->execute();
+	}	
+	
+	$newId = $db->lastInsertId();
+	
+	echo "<br>$newId";
 		
-		$newId = $db->lastInsertId();
-		
-		
-		echo "<br>$newId";
-		}
+	if(isset($_POST['newtopic'])){
+		$newtopic = isset($_POST['newtopic']) ? $_POST['newtopic'] : '';
+		$stmt = $db->prepare("INSERT INTO topics(name)
+						VALUES(:name)");
+		$stmt->bindParam(":name", $newtopic, PDO::PARAM_STR, 100);
+		$stmt->execute();
+	}
+	
+	$newTopicId = $db->lastInsertId();
+	
+	echo "<br>$newTopicsId";
 ?>
 <html>
 <head>

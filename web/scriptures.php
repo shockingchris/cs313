@@ -7,11 +7,18 @@
 		$content = isset($_POST['content']) ? $_POST['content'] : '';
 		$topics = isset($_POST['topics']) ? $_POST['topics'] : ''; 
 	}
+	else{
+		$book = '';
+		$chatper ='';
+		$verse ='';
+		$content='';
+		$topics='';
+	}
 
-	if(isset($_POST['submit'])){
-		foreach($db->query('INSERT INTO scripture(book, chapter, verse, content)
-							VALUES("$book", "$chapter", "$verse", "$content");'));
-		}
+	// if(isset($_POST['submit'])){
+		// foreach($db->query('INSERT INTO scripture(book, chapter, verse, content)
+							// VALUES("$book", "$chapter", "$verse", "$content");'));
+		// }
 ?>
 <html>
 <head>

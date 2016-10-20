@@ -48,7 +48,6 @@
 	$newTopicId = $db->lastInsertId();
 	
 	echo "<br>$newTopicId";
-	SELECT id FROM topics WHERE name = $row
 	
 	if (!empty($topics)){
 			foreach($topics) as $row){

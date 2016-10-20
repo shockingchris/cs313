@@ -28,7 +28,10 @@
 		$stmt->bindParam(":content", $content, PDO::PARAM_STR, 100);
 		$stmt->execute();
 		
-		echo "<br>$book";
+		$newId = $db->lastInsertId();
+		
+		
+		echo "<br>$newId";
 		}
 ?>
 <html>

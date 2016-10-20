@@ -20,9 +20,15 @@
 
 	if(isset($_POST['submit'])){
 		echo "did an insert!";
-		$db->prepare('INSERT INTO scripture(book, chapter, verse, content)
+		$stmt = $db->prepare('INSERT INTO scripture(book, chapter, verse, content)
 						VALUES("$book", "$chapter", "$verse", "$content")');
-		echo "$book";
+		$stmt->bindParam("$book", $book, PDO::PARAM_STR, 100);
+		$stmt->bindParam("$chapter", $book, PDO::PARAM_INT);
+		$stmt->bindParam("$verse", $book, PDO::PARAM_INT);
+		$stmt->bindParam("$book", $book, PDO::PARAM_STR, 100);
+		$stmt->execute();
+		
+		echo "<br>$book";
 		}
 ?>
 <html>

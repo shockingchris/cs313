@@ -52,6 +52,7 @@
 	if (!empty($topics)){
 			foreach($topics as $row){
 				$topicId = $db->query('SELECT id FROM topics WHERE name="$row"');
+				echo "<br>$topicId";
 				$stmt = $db->prepare("INSERT INTO link(scripture_id, topics_id)
 				VALUES(:scripture_id, :topics_id)");
 				$stmt->bindParam(":scripture_id", $newId, PDO::PARAM_INT);

@@ -18,6 +18,8 @@
 		$content='';
 		$topics='';
 		$newtopic='';
+		$newId='';
+		$newTopicId='';
 	}
 
 	if(isset($_POST['submit'])){
@@ -29,13 +31,14 @@
 		$stmt->bindParam(":verse", $verse, PDO::PARAM_INT);
 		$stmt->bindParam(":content", $content, PDO::PARAM_STR, 100);
 		$stmt->execute();
+		
 	}	
 	
 	$newId = $db->lastInsertId();
 	
 	echo "<br>$newId";
 		
-	if(isset($_POST['newtopic'])){
+	if($_POST['newtopic']!='')){
 		$stmt = $db->prepare("INSERT INTO topics(name)
 						VALUES(:name)");
 		$stmt->bindParam(":name", $newtopic, PDO::PARAM_STR, 100);
@@ -45,6 +48,18 @@
 	$newTopicId = $db->lastInsertId();
 	
 	echo "<br>$newTopicId";
+	SELECT id FROM topics WHERE name = $row
+	
+	if (!empty($topics)){
+			foreach($topics) as $row){
+				$topicId = $db->query("SELECT id FROM topics WHERE name='$row'");
+				$stmt = $db->prepare("INSERT INTO link(scripture_id, topics_id)
+				VALUES(:scripture_id, :topics_id)");
+				$stmt->bindParam(":scripture_id", $newId, PDO::PARAM_INT);
+				$stmt->bindParam(":topics_id", $topicId, PDO::PARAM_INT);
+				$stmt->execute();
+				}
+	}
 ?>
 <html>
 <head>

@@ -50,7 +50,7 @@
 	echo "<br>$newTopicId";
 	
 	if (!empty($topics)){
-			foreach($topics) as $row){
+			foreach($topics as $row){
 				$topicId = $db->query('SELECT id FROM topics WHERE name="$row"');
 				$stmt = $db->prepare("INSERT INTO link(scripture_id, topics_id)
 				VALUES(:scripture_id, :topics_id)");

@@ -1,4 +1,18 @@
 <?php include 'dbaccess.php';?>
+<?php
+	if(isset($_POST['submit'])){
+		$book = isset($_POST['book']) ? $_POST['book'] : '';
+		$chapter = isset($_POST['chapter']) ? $_POST['chapter'] : ''; 
+		$verse = isset($_POST['verse']) ? $_POST['verse'] : ''; 
+		$content = isset($_POST['content']) ? $_POST['content'] : '';
+		$topics = isset($_POST['topics']) ? $_POST['topics'] : ''; 
+	}
+
+	if(isset($_POST['submit'])){
+		foreach($db->query('INSERT INTO scripture(book, chapter, verse, content)
+							VALUES("$book", "$chapter", "$verse", "$content");');
+		}
+?>
 <html>
 <head>
 <meta charset="utf-8">
@@ -18,7 +32,7 @@ Topics:  <br>
 <?php
 foreach($db->query('SELECT name FROM topics') as $row)
 {
-	echo "<input type='checkbox' name='topic[]' value='" .
+	echo "<input type='checkbox' name='topics[]' value='" .
 	$row['name'] . "'>" . " " . $row['name'] . "<br/>" ;
 }
 ?>

@@ -16,8 +16,8 @@
 	}
 
 	if(isset($_POST['submit'])){
-		foreach($db->query('INSERT INTO scripture(book, chapter, verse, content)
-						VALUES("$book", "$chapter", "$verse", "$content");'));
+		$db->query('INSERT INTO scripture(book, chapter, verse, content)
+						VALUES("$book", "$chapter", "$verse", "$content");');
 		}
 ?>
 <html>

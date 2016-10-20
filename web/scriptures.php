@@ -2,6 +2,7 @@
 <?php
 	print_r($_POST);
 	if(isset($_POST['submit'])){
+		echo "We made it submit!";
 		$book = isset($_POST['book']) ? $_POST['book'] : '';
 		$chapter = isset($_POST['chapter']) ? $_POST['chapter'] : ''; 
 		$verse = isset($_POST['verse']) ? $_POST['verse'] : ''; 
@@ -9,6 +10,7 @@
 		$topics = isset($_POST['topics']) ? $_POST['topics'] : ''; 
 	}
 	else{
+		echo "didn't submit";
 		$book = '';
 		$chatper ='';
 		$verse ='';
@@ -17,6 +19,7 @@
 	}
 
 	if(isset($_POST['submit'])){
+		echo "did an insert!";
 		$db->query('INSERT INTO scripture(book, chapter, verse, content)
 						VALUES("$book", "$chapter", "$verse", "$content");');
 		}

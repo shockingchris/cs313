@@ -52,6 +52,7 @@
 	if (!empty($topics)){
 		echo "In the link IF";
 			foreach($topics as $row){
+				echo "in the link FOREACH";
 				$topicId = $db->query('SELECT id FROM topics WHERE name="$row"');
 				echo "<br>$topicId";
 				$stmt = $db->prepare("INSERT INTO link(scripture_id, topics_id)

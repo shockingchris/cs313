@@ -53,6 +53,10 @@
 foreach ($db->query('SELECT salesman.name, appt.apptval, call.callval, deal.dealval
 FROM salesman, appt, call, deal LIMIT 2') as $row)
 {
+	$name = isset($row['name']) ? $row['name'] : '';
+	$callval = isset($row['callval']) ? $row['callval'] : 0;
+	$dealval = isset($row['dealval']) ? $row['dealval'] : 0;
+	$apptval = isset($row['apptval']) ? $row['apptval'] : 0;
 	echo '<tr>';
 	echo '<td>' . $row['name'] . '</td>';
 	echo '<td>' . $row['callval'] . '</td>';

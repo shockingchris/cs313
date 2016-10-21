@@ -19,7 +19,6 @@
 		$newTopicId='';
 	}
 	
-	if()
 	if(isset($_POST['newperson'])){
 		$stmt = $db->prepare("INSERT INTO salesman(name)
 						VALUES(:name)");

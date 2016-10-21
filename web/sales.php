@@ -8,18 +8,19 @@
 		$newperson = isset($_POST['newperson']) ? $_POST['newperson'] : ''; 
 		$incentive = isset($_POST['incentive']) ? $_POST['incentive'] : ''; 
 		$newtopic = isset($_POST['newtopic']) ? $_POST['newtopic'] : '';
+		$submit = $_POST['submit'];
 	}
 	else{
 		//echo "didn't submit";
 		$salesman = '';
-		$newperson ='';
 		$incentive ='';
 		$newtopic='';
 		$newId='';
 		$newTopicId='';
 	}
 	
-	if($_POST['newperson']!=''){
+	if()
+	if(isset($_POST['newperson'])){
 		$stmt = $db->prepare("INSERT INTO salesman(name)
 						VALUES(:name)");
 		$stmt->bindParam(":name", $newperson, PDO::PARAM_STR, 100);

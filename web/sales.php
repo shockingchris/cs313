@@ -19,14 +19,13 @@
 		$newTopicId='';
 	}
 	
-	if($submit == 'deletePerson'){
-		echo "deleting";
+	if($submit == 'deletePerson' && $deletedPerson!=''){
 		$stmt = $db->prepare("DELETE FROM salesman WHERE name=:deletedPerson");
 		$stmt->bindparam(":deletedPerson", $deletedPerson, PDO::PARAM_STR, 100);
 		$stmt->execute();
 	}
 	
-	if($submit=='addPerson'){
+	if($submit=='addPerson' && $newPerson!=''){
 		$stmt = $db->prepare("INSERT INTO salesman(name)
 						VALUES(:name)");
 		$stmt->bindParam(":name", $newperson, PDO::PARAM_STR, 100);

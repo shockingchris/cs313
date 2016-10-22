@@ -5,7 +5,8 @@
 	if(isset($_POST['submit'])){
 		//echo "We made it submit!";
 		$salesman = isset($_POST['salesman']) ? $_POST['salesman'] : '';
-		$newperson = isset($_POST['newperson']) ? $_POST['newperson'] : ''; 
+		$newperson = isset($_POST['newperson']) ? $_POST['newperson'] : '';
+		$deletedPerson = isset($_POST['deletedPerson']) ? $_POST['deletedPerson'] : '';
 		$incentive = isset($_POST['incentive']) ? $_POST['incentive'] : ''; 
 		$newtopic = isset($_POST['newtopic']) ? $_POST['newtopic'] : '';
 		$submit = $_POST['submit'];
@@ -14,12 +15,17 @@
 		//echo "didn't submit";
 		$salesman = '';
 		$incentive ='';
-		$newtopic='';
 		$newId='';
 		$newTopicId='';
 	}
 	
-	if(isset($_POST['newperson'])){
+	if($submit == 'deletePerson'){
+		$stmt = $db->prepare("DELETE FROM salesman WHERE name='$deletedPerson'");
+		$stmt->bindparam(":name", $deletedPerson, PDO:PARAM_STR, 100);
+		$stmt->execute();
+	}
+	
+	if($newperson=='addPerson'){
 		$stmt = $db->prepare("INSERT INTO salesman(name)
 						VALUES(:name)");
 		$stmt->bindParam(":name", $newperson, PDO::PARAM_STR, 100);
@@ -81,19 +87,25 @@ Following Salesman available to search info:<br>
 Add a new Salesman: 
 <form action='' method="POST">
 <input type="text" name="newperson"/>
-<button type="submit" name="submit" value="submit">Submit</button>
+<button type="submit" name="submit" value="addPerson">Submit</button>
+</form>
+
+Delete an existing Salesman: 
+<form action='' method="POST">
+<input type="text" name="deletedPerson"/>
+<button type="submit" name="submit" value="deletePerson">Delete</button>
 </form>
 
 <br>See a salesman's sales info: <br/>
 <form action="" method="POST">
 <input type="text" name="salesname"/><br/>
-<button type="submit" name="submit" value="submit">Submit</button>
+<button type="submit" name="submit" value="info">Submit</button>
 </form>
 
 <?php 
 	if(isset($_POST['salesname'])){
 		$salesname = $_POST['salesname'];
-		echo "<br>Information for {$salesname}:<br>";
+		echo "Information for {$salesname}:<br>";
 		echo "Appointments:<br>";
 		$apptTotal = 0;
 		$callTotal = 0;
@@ -115,7 +127,6 @@ Add a new Salesman:
 			$callTotal+= 1;
 		}
 		echo "Total Calls: " . $apptTotal . "<br>";
-		echo "<br>Total Appointments: " . $apptTotal;
 		echo "<br>Deals Closed:<br>";
 		foreach($db->query("SELECT salesman.name, deal.dinfo FROM
 				salesman INNER JOIN deal ON salesman.id=deal.user_id

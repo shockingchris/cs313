@@ -7,7 +7,7 @@
 		$salesman = isset($_POST['salesman']) ? $_POST['salesman'] : '';
 		$newperson = isset($_POST['newperson']) ? $_POST['newperson'] : '';
 		$deletedPerson = isset($_POST['deletedPerson']) ? $_POST['deletedPerson'] : '';
-		$incentive = isset($_POST['incentive']) ? $_POST['incentive'] : ''; 
+		$incentive = isset($_POST['incentive']) ? $_POST['incentive'] : '';
 		$newtopic = isset($_POST['newtopic']) ? $_POST['newtopic'] : '';
 		$submit = $_POST['submit'];
 	}
@@ -88,7 +88,7 @@ Following Salesman available to search info:<br>
 Add a new Salesman: 
 <form action='' method="POST">
 <input type="text" name="newperson"/>
-<button type="submit" name="submit" value="addPerson">Submit</button>
+<button type="submit" name="submit" value="addPerson">Add</button>
 </form>
 
 Delete an existing Salesman: 
@@ -97,10 +97,21 @@ Delete an existing Salesman:
 <button type="submit" name="submit" value="deletePerson">Delete</button>
 </form>
 
+Add a new Task: 
+<form action='' method="POST">
+<select name="incentive">
+	<option value="appt">Appointment</option>
+	<option value="call">Call</option>
+	<option value="deal">Deal</option>
+</select>
+<input type="text" name="newtask"/>
+<button type="submit" name="submit" value="addPerson">Add</button>
+</form>
+
 <br>See a salesman's sales info: <br/>
 <form action="" method="POST">
 <input type="text" name="salesname"/><br/>
-<button type="submit" name="submit" value="info">Submit</button>
+<button type="submit" name="submit" value="info">Check</button>
 </form>
 
 <?php 

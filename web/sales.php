@@ -11,7 +11,7 @@
 		$newtopic = isset($_POST['newtopic']) ? $_POST['newtopic'] : '';
 		$people = isset($_POST['people']) ? $_POST['people'] : '';
 		$submit = $_POST['submit'];
-		
+		$val=15;
 	}
 	else{
 		//echo "didn't submit";
@@ -39,7 +39,7 @@
 						VALUES(:info, :val, :people)");
 		$stmt->bindParam(":incentive", $incentive, PDO::PARAM_STR, 100);
 		$stmt->bindParam(":info", $newTask, PDO::PARAM_STR, 100);
-		$stmt->bindParam(":val", 15, PDO::PARAM_INT);
+		$stmt->bindParam(":val", $val, PDO::PARAM_INT);
 		$stmt->bindParam(":people", $people, PDO::PARAM_INT);
 		$stmt->execute();
 		echo "inserted task";

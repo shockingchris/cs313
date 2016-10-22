@@ -120,7 +120,6 @@ Add a new Task:
 Task Info: <input type="text" name="newtask"/>
  For : <select name="people">
 <?php
-	echo "<option value=''></option>";
 	foreach($db->query("SELECT id, name, FROM salesman") as $row)
 		{
 			echo "<option value='" . $row['id'] . "'>" . $row['name'] . "</option>";

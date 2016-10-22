@@ -144,32 +144,32 @@ Task Info: <input type="text" name="newtask"/><br>
 		$apptTotal = 0;
 		$callTotal = 0;
 		$dealTotal = 0;
-		foreach($db->query("SELECT salesman.name, appt.ainfo FROM
+		foreach($db->query("SELECT salesman.name, appt.info FROM
 				salesman INNER JOIN appt ON salesman.id=appt.user_id
 				WHERE salesman.name='$salesname'") as $row)
 		{
-			echo $row['ainfo'] . '<br>';
+			echo $row['info'] . '<br>';
 			$apptTotal+= 1;
 		}
 		echo "Total Appointments: " . $apptTotal . "<br>";
 		echo "<br>Calls:<br>";
-		foreach($db->query("SELECT salesman.name, call.cinfo FROM
+		foreach($db->query("SELECT salesman.name, call.info FROM
 				salesman INNER JOIN call ON salesman.id=call.user_id
 				WHERE salesman.name='$salesname'") as $row)
 		{
-			echo $row['cinfo'] . '<br>';
+			echo $row['info'] . '<br>';
 			$callTotal+= 1;
 		}
-		echo "Total Calls: " . $apptTotal . "<br>";
+		echo "Total Calls: " . $callTotal . "<br>";
 		echo "<br>Deals Closed:<br>";
-		foreach($db->query("SELECT salesman.name, deal.dinfo FROM
+		foreach($db->query("SELECT salesman.name, deal.info FROM
 				salesman INNER JOIN deal ON salesman.id=deal.user_id
 				WHERE salesman.name='$salesname'") as $row)
 		{
-			echo $row['dinfo'] . '<br>';
+			echo $row['info'] . '<br>';
 			$dealTotal+= 1;
 		}
-		echo "Total Deals: " . $apptTotal . "<br>";
+		echo "Total Deals: " . $dealTotal . "<br>";
 	}
 ?>
 </div>

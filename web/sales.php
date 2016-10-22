@@ -1,7 +1,5 @@
 <?php include 'dbaccess.php';?>
 <?php
-	echo "<br><br>";
-	print_r($_POST);
 	if(isset($_POST['submit'])){
 		//echo "We made it submit!";
 		$salesman = isset($_POST['salesman']) ? $_POST['salesman'] : '';
@@ -56,6 +54,7 @@
 <div class="top"><?php include 'topnavbars.php';?></div>
 <div class="left"><?php include 'leftnavbars.php';?></div>
 <div class="main">
+<?php print_r($_POST); ?>
 <h1>Salesman Information</h1>
 <?php
 // <table class="responstable">

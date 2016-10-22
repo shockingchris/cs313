@@ -9,7 +9,9 @@
 		$deletedPerson = isset($_POST['deletedPerson']) ? $_POST['deletedPerson'] : '';
 		$incentive = isset($_POST['incentive']) ? $_POST['incentive'] : '';
 		$newtopic = isset($_POST['newtopic']) ? $_POST['newtopic'] : '';
+		$people = isset($_POST['people']) ? $_POST['people'] : '';
 		$submit = $_POST['submit'];
+		
 	}
 	else{
 		//echo "didn't submit";
@@ -30,6 +32,17 @@
 						VALUES(:name)");
 		$stmt->bindParam(":name", $newperson, PDO::PARAM_STR, 100);
 		$stmt->execute();
+	}
+	
+	if($submit=='addTask' && $incentive!='' && $people!=''){
+		$stmt = $db->prepare("INSERT INTO :incentive(info, val, user_id)
+						VALUES(:info, :val, :people)");
+		$stmt->bindParam(":incentive", $incentive, PDO::PARAM_STR, 100);
+		$stmt->bindParam(":info", $newTask, PDO::PARAM_STR, 100);
+		$stmt->bindParam(":val", 15, PDO::PARAM_INT);
+		$stmt->bindParam(":people", $people, PDO::PARAM_INT);
+		$stmt->execute();
+		echo "inserted task";
 	}
 	
 	$newPersonId = $db->lastInsertId();
@@ -99,12 +112,23 @@ Delete an existing Salesman:
 Add a new Task: 
 <form action='' method="POST">
 <select name="incentive">
+	<option value=""></option>
 	<option value="appt">Appointment</option>
 	<option value="call">Call</option>
 	<option value="deal">Deal</option>
+</select></br>
+Task Info: <input type="text" name="newtask"/>
+ For : <select name="people">
+<?php
+	echo "<option value=''></option>";
+	foreach($db->query("SELECT id, name, FROM salesman") as $row)
+		{
+			echo "<option value='" . $row['id'] . "'>" . $row['name'] . "</option>";
+		}
+?>
 </select>
-<input type="text" name="newtask"/>
-<button type="submit" name="submit" value="addPerson">Add</button>
+
+<button type="submit" name="submit" value="addTask">Add</button>
 </form>
 
 <br>See a salesman's sales info: <br/>

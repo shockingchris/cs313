@@ -20,6 +20,7 @@
 	}
 	
 	if($submit == 'deletePerson'){
+		echo "deleting";
 		$stmt = $db->prepare("DELETE FROM salesman WHERE name=':deletedPerson'");
 		$stmt->bindparam(":name", $deletedPerson, PDO::PARAM_STR, 100);
 		$stmt->execute();

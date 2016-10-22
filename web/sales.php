@@ -38,38 +38,36 @@
 <div class="left"><?php include 'leftnavbars.php';?></div>
 <div class="main">
 <h1>Salesman Information</h1>
-
-<table class="responstable">
-  
-  <tr>
-    <th>Salesperson</th>
-    <th>Calls (15)</th>
-    <th>Appointments(15)</th>
-	<th>Deals (15)</th>
-	<th>Total</th>
-  </tr>
-
 <?php
-foreach ($db->query('SELECT salesman.name, appt.apptval, call.callval, deal.dealval
-FROM salesman, appt, call, deal LIMIT 3') as $row)
-{
-	$name = isset($row['name']) ? $row['name'] : '';
-	$callval = isset($row['callval']) ? $row['callval'] : 0;
-	$dealval = isset($row['dealval']) ? $row['dealval'] : 0;
-	$apptval = isset($row['apptval']) ? $row['apptval'] : 0;
-	echo '<tr>';
-	echo '<td>' . $name . '</td>';
-	echo '<td>' . $callval . '</td>';
-	echo '<td>' . $apptval . '</td>';
-	echo '<td>' . $dealval . '</td>';
-	$total = 0;
-	$total = $row['callval'] + $row['apptval'] + $row['dealval'];
-	echo '<td>' . $total . '</td>';
-	echo '</tr>';
-}
-?>
+// <table class="responstable">
   
-</table>
+  // <tr>
+    // <th>Salesperson</th>
+    // <th>Calls (15)</th>
+    // <th>Appointments(15)</th>
+	// <th>Deals (15)</th>
+	// <th>Total</th>
+  // </tr>
+
+// <?php
+// foreach ($db->query('SELECT salesman.name, appt.apptval, call.callval, deal.dealval
+// FROM salesman, appt, call, deal LIMIT 3') as $row)
+// {
+	// $name = isset($row['name']) ? $row['name'] : '';
+	// $callval = isset($row['callval']) ? $row['callval'] : 0;
+	// $dealval = isset($row['dealval']) ? $row['dealval'] : 0;
+	// $apptval = isset($row['apptval']) ? $row['apptval'] : 0;
+	// echo '<tr>';
+	// echo '<td>' . $name . '</td>';
+	// echo '<td>' . $callval . '</td>';
+	// echo '<td>' . $apptval . '</td>';
+	// echo '<td>' . $dealval . '</td>';
+	// $total = 0;
+	// $total = $row['callval'] + $row['apptval'] + $row['dealval'];
+	// echo '<td>' . $total . '</td>';
+	// echo '</tr>';
+// } 
+?>
 <br/>
 Following Salesman available to search info:<br>
 <?php

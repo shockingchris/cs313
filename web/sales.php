@@ -112,7 +112,7 @@ Delete an existing Salesman:
 Add a new Task: 
 <form action='' method="POST">
 <select name="incentive">
-	<option value=""></option>
+	<option value="" size="10em"></option>
 	<option value="appt">Appointment</option>
 	<option value="call">Call</option>
 	<option value="deal">Deal</option>

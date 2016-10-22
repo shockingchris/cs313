@@ -27,7 +27,7 @@
 	}
 	
 	if($newperson=='addPerson'){
-		$stmt = $db->prepare("INSERT INTO salesman(name)
+		$stmt = $this->$db->prepare("INSERT INTO salesman(name)
 						VALUES(:name)");
 		$stmt->bindParam(":name", $newperson, PDO::PARAM_STR, 100);
 		$stmt->execute();

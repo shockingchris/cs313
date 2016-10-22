@@ -95,26 +95,36 @@ Add a new Salesman:
 		$salesname = $_POST['salesname'];
 		echo "<br>Information for {$salesname}:<br>";
 		echo "Appointments:<br>";
+		$apptTotal = 0;
+		$callTotal = 0;
+		$dealTotal = 0;
 		foreach($db->query("SELECT salesman.name, appt.ainfo FROM
 				salesman INNER JOIN appt ON salesman.id=appt.user_id
 				WHERE salesman.name='$salesname'") as $row)
 		{
 			echo $row['ainfo'] . '<br>';
+			$apptTotal+= 1;
 		}
+		echo "Total Appointments: " . $apptTotal . "<br>";
 		echo "<br>Calls:<br>";
 		foreach($db->query("SELECT salesman.name, call.cinfo FROM
 				salesman INNER JOIN call ON salesman.id=call.user_id
 				WHERE salesman.name='$salesname'") as $row)
 		{
 			echo $row['cinfo'] . '<br>';
+			$callTotal+= 1;
 		}
+		echo "Total Calls: " . $apptTotal . "<br>";
+		echo "<br>Total Appointments: " . $apptTotal;
 		echo "<br>Deals Closed:<br>";
 		foreach($db->query("SELECT salesman.name, deal.dinfo FROM
 				salesman INNER JOIN deal ON salesman.id=deal.user_id
 				WHERE salesman.name='$salesname'") as $row)
 		{
 			echo $row['dinfo'] . '<br>';
+			$dealTotal+= 1;
 		}
+		echo "Total Deals: " . $apptTotal . "<br>";
 	}
 ?>
 </div>

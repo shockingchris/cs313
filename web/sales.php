@@ -117,10 +117,10 @@ Add a new Task:
 	<option value="call">Call</option>
 	<option value="deal">Deal</option>
 </select></br>
-Task Info: <input type="text" name="newtask"/>
+Task Info: <input type="text" name="newtask"/><br>
  For : <select name="people">
 <?php
-	foreach($db->query("SELECT id, name, FROM salesman") as $row)
+	foreach($db->query("SELECT id, name FROM salesman") as $row)
 		{
 			echo "<option value='" . $row['id'] . "'>" . $row['name'] . "</option>";
 		}

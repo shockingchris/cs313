@@ -20,29 +20,29 @@
 		$valu = 0;
 	}
 	
-	if($submit == 'deletePerson' && $deletedPerson!=''){
+	if($_POST['submit'] == 'deletePerson' && $deletedPerson!=''){
 		$stmt = $db->prepare("DELETE FROM salesman WHERE name=:deletedPerson");
 		$stmt->bindparam(":deletedPerson", $deletedPerson, PDO::PARAM_STR, 100);
 		$stmt->execute();
 	}
 	
-	if($submit=='addPerson' && $newPerson!=''){
+	if($_POST['submit']=='addPerson' && $newPerson!=''){
 		$stmt = $db->prepare("INSERT INTO salesman(name)
 						VALUES(:name)");
 		$stmt->bindParam(":name", $newperson, PDO::PARAM_STR, 100);
 		$stmt->execute();
 	}
 	
-	// if($submit=='addTask'){
-		// echo "inserting";
-		// $stmt = $db->prepare("INSERT INTO $incentive(info, val, user_id)
-						// VALUES(:info, :valu, :people)");
-		// $stmt->bindParam(":info", $newTask, PDO::PARAM_STR, 100);
-		// $stmt->bindParam(":valu", $valu, PDO::PARAM_INT);
-		// $stmt->bindParam(":people", $people, PDO::PARAM_INT);
-		// $stmt->execute();
-		// echo "inserted task";
-	// }
+	if($_POST['submit']=='addTask'){
+		echo "inserting";
+		$stmt = $db->prepare("INSERT INTO $incentive(info, val, user_id)
+						VALUES(:info, :valu, :people)");
+		$stmt->bindParam(":info", $newTask, PDO::PARAM_STR, 100);
+		$stmt->bindParam(":valu", $valu, PDO::PARAM_INT);
+		$stmt->bindParam(":people", $people, PDO::PARAM_INT);
+		$stmt->execute();
+		echo "inserted task";
+	}
 	$newPersonId = $db->lastInsertId();
 ?>
 <html>

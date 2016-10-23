@@ -31,7 +31,6 @@
 			<li class="leftlist"><a>Week 13</a></li>
         </ul>
     </div>  -->
-    <div class="main">
 		<h1>Sign In Here</h1>
 		<br>
 		<form action='' method='POST'>
@@ -47,7 +46,6 @@
 		</tr>
 		</table>
 		</form>
-	</div>
 	
 </body>
 </html>

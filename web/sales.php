@@ -55,11 +55,11 @@
 <div class="top"><?php include 'topnavbars.php';?></div>
 <div class="left"><?php include 'leftnavbars.php';?></div>
 <div class="main">
-<?php //print_r($_POST);
-	// echo"<br>";
-	// if(isset($submit)){
-	// echo $submit;
-	// }
+<?php print_r($_POST);
+	echo"<br>";
+	if(isset($submit)){
+		echo $submit;
+	}
 ?>
 <h1>Salesman Information</h1>
 <br/>
@@ -93,7 +93,7 @@ Record Work:
 	<option value="deal">Deal</option>
 </select></br>
 Task Info: <input type="text" name="newTask"/><br>
-Task Amount: <input type="number" name="valu"/><br>
+Task Amount: <input type="text" name="valu"/><br>
  For : <select name="people">
 <?php
 	foreach($db->query("SELECT id, name FROM salesman") as $row)

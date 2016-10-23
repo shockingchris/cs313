@@ -11,7 +11,7 @@
 	    <ul class="topbar">
             <li class="toplist"><a href="homepage.html">Home Page</a></li>
             <li class="toplist"><a>Games</a></li>
-            <li style="float:right" class="toplist" class="active"><a>Login</a></li>
+            <li style="float:right" class="toplist" class="active"><a href="signin.php">Login</a></li>
             </ul>
     </div>
 	<div class="left">

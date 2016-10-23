@@ -39,10 +39,10 @@
 		<th>Enter a Username and Password</th>
 		</tr><tr>
 		<td>Username:</td>
-		<td><input type="text" name="username" size="7"/></td>
+		<td><input type="text" name="username" size="10"/></td>
 		</tr><tr>
 		<td>Password:</td>
-		<td><input type="password" name="pass" size="7"/></td>
+		<td><input type="password" name="pass" size="10"/></td>
 		</tr>
 	</div>
 	

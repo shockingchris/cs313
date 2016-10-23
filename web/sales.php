@@ -118,7 +118,7 @@ Record Work:
 	<option value="call">Call</option>
 	<option value="deal">Deal</option>
 </select></br>
-Task Info: <input type="text" name="newtask"/><br>
+Task Info: <input type="text" name="newTask"/><br>
 Task Amount: <input type="number" max="20" name="valu"/><br>
  For : <select name="people">
 <?php

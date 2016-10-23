@@ -34,7 +34,7 @@
     <div class="main">
 		<h1>Sign In Here</h1>
 		<br>
-		<table class="responstable" align="center">
+		<table align="center" class="responstable">
 		<tr>
 		<th>Enter a Username and Password</th>
 		</tr><tr>

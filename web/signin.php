@@ -33,10 +33,10 @@
     </div>
     <div class="main">
 		<h1>Sign In Here</h1>
-		<br><br><br><br>
+		<br><br>
 		<p style="text-align:center">Please Enter a Username and Password
 		<br>Username: <input type="text" name="username"/>
-		<br>Password: <input type="password" name="pass"/>
+		<br><br>Password: <input type="password" name="pass"/>
 		</p>
 	</div>
 	

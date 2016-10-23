@@ -30,7 +30,6 @@
 .responstable td {
   display: block;
   word-wrap: break-word;
-  max-width: 7em;
   text-align: center;
 }
 @media (min-width: 400px) {

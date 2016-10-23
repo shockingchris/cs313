@@ -17,6 +17,7 @@
 		$incentive ='';
 		$newId='';
 		$newTopicId='';
+		$val = 0;
 	}
 	
 	if($submit == 'deletePerson' && $deletedPerson!=''){

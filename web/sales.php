@@ -9,7 +9,7 @@
 		$newtopic = isset($_POST['newtopic']) ? $_POST['newtopic'] : '';
 		$people = isset($_POST['people']) ? $_POST['people'] : '';
 		$submit = $_POST['submit'];
-		$val = isset($_POST['val']) ? $_POST['val'] : '';;
+		$valu = isset($_POST['valu']) ? $_POST['valu'] : '';;
 	}
 	else{
 		//echo "didn't submit";
@@ -17,7 +17,7 @@
 		$incentive ='';
 		$newId='';
 		$newTopicId='';
-		$val = 0;
+		$valu = 0;
 	}
 	
 	if($submit == 'deletePerson' && $deletedPerson!=''){
@@ -36,10 +36,10 @@
 	if($submit=='addTask' && isset($incentive) && isset($people) && isset($val)){
 		echo "inserting";
 		$stmt = $db->prepare("INSERT INTO :incentive(info, val, user_id)
-						VALUES(':info', :val, :people)");
+						VALUES(':info', :valu, :people)");
 		$stmt->bindParam(":incentive", $incentive, PDO::PARAM_STR, 100);
 		$stmt->bindParam(":info", $newTask, PDO::PARAM_STR, 100);
-		$stmt->bindParam(":val", $val, PDO::PARAM_INT);
+		$stmt->bindParam(":valu", $valu, PDO::PARAM_INT);
 		$stmt->bindParam(":people", $people, PDO::PARAM_INT);
 		$stmt->execute();
 		echo "inserted task";
@@ -119,7 +119,7 @@ Record Work:
 	<option value="deal">Deal</option>
 </select></br>
 Task Info: <input type="text" name="newtask"/><br>
-Task Amount: <input type="number" max="20" name="val"/><br>
+Task Amount: <input type="number" max="20" name="valu"/><br>
  For : <select name="people">
 <?php
 	foreach($db->query("SELECT id, name FROM salesman") as $row)

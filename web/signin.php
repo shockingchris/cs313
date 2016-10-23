@@ -34,16 +34,19 @@
     <div class="main">
 		<h1>Sign In Here</h1>
 		<br>
+		<form action='' method='POST'>
 		<table align="center" class="responstable">
 		<tr>
 		<th>Enter a Username and Password</th>
 		</tr><tr>
 		<td>Username:</td>
-		<td><input type="text" name="username" size="10"/></td>
+		<td><input type="text" name="username" size="12"/></td>
 		</tr><tr>
 		<td>Password:</td>
-		<td><input type="password" name="pass" size="10"/></td>
+		<td><input type="password" name="pass" size="12"/></td>
 		</tr>
+		</table>
+		</form>
 	</div>
 	
 </body>

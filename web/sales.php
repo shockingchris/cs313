@@ -33,7 +33,7 @@
 		$stmt->execute();
 	}
 	
-	if($submit=='addTask' && $incentive!='' && $people!='' && $val!=''){
+	if($submit=='addTask' && isset($incentive) && isset($people) && isset($val)){
 		echo "inserting";
 		$stmt = $db->prepare("INSERT INTO :incentive(info, val, user_id)
 						VALUES(':info', :val, :people)");

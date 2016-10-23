@@ -33,8 +33,9 @@
 	}
 	
 	if($submit=='addTask' && $incentive!='' && $people!='' && $val!=''){
+		echo "inserting";
 		$stmt = $db->prepare("INSERT INTO :incentive(info, val, user_id)
-						VALUES(:info, :val, :people)");
+						VALUES(':info', :val, :people)");
 		$stmt->bindParam(":incentive", $incentive, PDO::PARAM_STR, 100);
 		$stmt->bindParam(":info", $newTask, PDO::PARAM_STR, 100);
 		$stmt->bindParam(":val", $val, PDO::PARAM_INT);

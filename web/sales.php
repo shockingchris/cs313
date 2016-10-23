@@ -20,13 +20,13 @@
 		$valu = 0;
 	}
 	
-	if($_POST['submit'] == 'deletePerson' && $deletedPerson!=''){
+	if($_POST['submit'] == 'deletePerson'/* && $deletedPerson!=''*/){
 		$stmt = $db->prepare("DELETE FROM salesman WHERE name=:deletedPerson");
 		$stmt->bindparam(":deletedPerson", $deletedPerson, PDO::PARAM_STR, 100);
 		$stmt->execute();
 	}
 	
-	if($_POST['submit']=='addPerson' && $newPerson!=''){
+	if($_POST['submit']=='addPerson'/* && $newPerson!=''*/){
 		$stmt = $db->prepare("INSERT INTO salesman(name)
 						VALUES(:name)");
 		$stmt->bindParam(":name", $newperson, PDO::PARAM_STR, 100);

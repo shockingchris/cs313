@@ -37,7 +37,7 @@
 		<form action='' method='POST'>
 		<table align="center" class="responstable">
 		<tr>
-		<th>Enter a Username and Password</th>
+		<th colspan="2">Enter a Username and Password</th>
 		</tr><tr>
 		<td>Username:</td>
 		<td><input type="text" name="username" size="12"/></td>

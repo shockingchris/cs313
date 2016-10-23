@@ -44,7 +44,6 @@
 		$stmt->execute();
 		echo "inserted task";
 	}
-	echo $submit;
 	$newPersonId = $db->lastInsertId();
 ?>
 <html>
@@ -56,7 +55,11 @@
 <div class="top"><?php include 'topnavbars.php';?></div>
 <div class="left"><?php include 'leftnavbars.php';?></div>
 <div class="main">
-<?php print_r($_POST); ?>
+<?php print_r($_POST);
+	echo"<br>";
+	if(isset($submit)){
+	echo $submit;
+	}?>
 <h1>Salesman Information</h1>
 <?php
 // <table class="responstable">

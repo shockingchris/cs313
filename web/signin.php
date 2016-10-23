@@ -34,10 +34,18 @@
     <div class="main">
 		<h1>Sign In Here</h1>
 		<br><br>
-		<p style="text-align:center">Please Enter a Username and Password
-		<br>Username: <input type="text" name="username"/>
-		<br><br>Password: <input type="password" name="pass"/>
-		</p>
+		<table class="responstable" style="text-align:center">
+		<tr>
+		<th>Please Enter a Username and Password</th>
+		</tr>
+		<tr>
+		<td>Username:</td>
+		<td><input type="text" name="username"/></td>
+		</tr>
+		<tr>
+		<td>Password:</td>
+		<td><input type="password" name="pass"/></td>
+		</tr>
 	</div>
 	
 </body>

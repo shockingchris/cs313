@@ -9,7 +9,7 @@
 		$newtopic = isset($_POST['newtopic']) ? $_POST['newtopic'] : '';
 		$people = isset($_POST['people']) ? $_POST['people'] : '';
 		$submit = $_POST['submit'];
-		$val=15;
+		$val = isset($_POST['val']) ? $_POST['val'] : '';;
 	}
 	else{
 		//echo "didn't submit";
@@ -32,7 +32,7 @@
 		$stmt->execute();
 	}
 	
-	if($submit=='addTask' && $incentive!='' && $people!=''){
+	if($submit=='addTask' && $incentive!='' && $people!='' && $val!=''){
 		$stmt = $db->prepare("INSERT INTO :incentive(info, val, user_id)
 						VALUES(:info, :val, :people)");
 		$stmt->bindParam(":incentive", $incentive, PDO::PARAM_STR, 100);
@@ -108,7 +108,7 @@ Delete an existing Salesman:
 <button type="submit" name="submit" value="deletePerson">Delete</button>
 </form>
 
-Add a new Task: 
+Record Work: 
 <form action='' method="POST">
 <select name="incentive">
 	<option value="" size="10em"></option>
@@ -117,6 +117,7 @@ Add a new Task:
 	<option value="deal">Deal</option>
 </select></br>
 Task Info: <input type="text" name="newtask"/><br>
+Task Amount: <input type="number" maxlength="2" name="val"/><br>
  For : <select name="people">
 <?php
 	foreach($db->query("SELECT id, name FROM salesman") as $row)

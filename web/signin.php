@@ -1,6 +1,8 @@
 <?php include 'dbaccess.php';?>
 <?php 
 	print_r($_POST);
+	
+	
 ?>
 <html>
   <head>
@@ -11,7 +13,6 @@
 </head>
   <body>
 	<h2>Welcome Lameos!</h2>
-		<br><br>
 		<form action='' method='POST'>
 		<table align="center" class="responstable">
 		<tr>

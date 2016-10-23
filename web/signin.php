@@ -40,10 +40,10 @@
 		<th colspan="2">Enter a Username and Password</th>
 		</tr><tr>
 		<td>Username:</td>
-		<td><input type="text" name="username" size="12"/></td>
+		<td><input type="text" name="username" size="15"/></td>
 		</tr><tr>
 		<td>Password:</td>
-		<td><input type="password" name="pass" size="12"/></td>
+		<td><input type="password" name="pass" size="15"/></td>
 		</tr>
 		</table>
 		</form>

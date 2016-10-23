@@ -36,7 +36,7 @@
 		<br>
 		<table class="responstable" align="center">
 		<tr>
-		<th>Please Enter a Username and Password</th>
+		<th>Enter a Username and Password</th>
 		</tr><tr>
 		<td>Username:</td>
 		<td><input type="text" name="username"/></td>

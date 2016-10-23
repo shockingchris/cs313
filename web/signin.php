@@ -23,7 +23,7 @@
 		<td><input type="password" name="pass" size="15"/></td>
 		</tr><tr>
 		<td colspan="2">
-		<input type="submit" name="submit" value="login">Log In</input>
+		<input type="submit" name="submit" value="login" content="Log In"></input>
 		</td>
 		</table>
 		</form>

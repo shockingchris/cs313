@@ -44,7 +44,7 @@
 		$stmt->execute();
 		echo "inserted task";
 	}
-	
+	echo $submit;
 	$newPersonId = $db->lastInsertId();
 ?>
 <html>

@@ -117,7 +117,7 @@ Record Work:
 	<option value="deal">Deal</option>
 </select></br>
 Task Info: <input type="text" name="newtask"/><br>
-Task Amount: <input type="number" maxlength="2" name="val"/><br>
+Task Amount: <input type="number" max="20" name="val"/><br>
  For : <select name="people">
 <?php
 	foreach($db->query("SELECT id, name FROM salesman") as $row)

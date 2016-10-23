@@ -1,7 +1,7 @@
 <?php include 'dbaccess.php';?>
 <?php
 	if(isset($_POST['submit'])){
-		//echo "We made it submit!";
+		echo "We made it submit!";
 		$salesman = isset($_POST['salesman']) ? $_POST['salesman'] : '';
 		$newperson = isset($_POST['newperson']) ? $_POST['newperson'] : '';
 		$deletedPerson = isset($_POST['deletedPerson']) ? $_POST['deletedPerson'] : '';
@@ -12,7 +12,7 @@
 		$valu = isset($_POST['valu']) ? $_POST['valu'] : '';;
 	}
 	else{
-		//echo "didn't submit";
+		echo "didn't submit";
 		$salesman = '';
 		$incentive ='';
 		$newId='';
@@ -93,7 +93,7 @@ Record Work:
 	<option value="deal">Deal</option>
 </select></br>
 Task Info: <input type="text" name="newTask"/><br>
-Task Amount: <input type="text" name="valu"/><br>
+Task Amount: <input type="number" name="valu"/><br>
  For : <select name="people">
 <?php
 	foreach($db->query("SELECT id, name FROM salesman") as $row)

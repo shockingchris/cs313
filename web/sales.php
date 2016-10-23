@@ -6,7 +6,7 @@
 		$newperson = isset($_POST['newperson']) ? $_POST['newperson'] : '';
 		$deletedPerson = isset($_POST['deletedPerson']) ? $_POST['deletedPerson'] : '';
 		$incentive = isset($_POST['incentive']) ? $_POST['incentive'] : '';
-		$newtopic = isset($_POST['newtopic']) ? $_POST['newtopic'] : '';
+		$newTask = isset($_POST['newTask']) ? $_POST['newTask'] : '';
 		$people = isset($_POST['people']) ? $_POST['people'] : '';
 		$submit = $_POST['submit'];
 		$valu = isset($_POST['valu']) ? $_POST['valu'] : '';;

@@ -55,11 +55,11 @@
 <div class="top"><?php include 'topnavbars.php';?></div>
 <div class="left"><?php include 'leftnavbars.php';?></div>
 <div class="main">
-<?php print_r($_POST);
-	echo"<br>";
-	if(isset($submit)){
-	echo $submit;
-	}
+<?php //print_r($_POST);
+	// echo"<br>";
+	// if(isset($submit)){
+	// echo $submit;
+	// }
 ?>
 <h1>Salesman Information</h1>
 <br/>

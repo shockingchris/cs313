@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="/table.css"/>
 </head>
   <body>
-	<h1>
+	<h2>Welcome Lameos!</h2>
 		<br><br>
 		<form action='' method='POST'>
 		<table align="center" class="responstable">

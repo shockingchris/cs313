@@ -10,7 +10,8 @@
 	<link rel="stylesheet" href="/table.css"/>
 </head>
   <body>
-		<br><br><br>
+	<h1>
+		<br><br>
 		<form action='' method='POST'>
 		<table align="center" class="responstable">
 		<tr>
@@ -23,7 +24,7 @@
 		<td><input type="password" name="pass" size="15"/></td>
 		</tr><tr>
 		<td colspan="2">
-		<button type="submit" name="submit" value="login" width="25px">Log In</button>
+		<button type="submit" name="submit" value="login" width="100px">Log In</button>
 		</td>
 		</table>
 		</form>

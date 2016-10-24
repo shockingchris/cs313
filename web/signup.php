@@ -13,6 +13,7 @@
 	}
 	
 	if($_POST['submit']=='login'){
+		echo "logging in";
 		echo password_hash($password, PASSWORD_DEFAULT). "\n";
 	}
 	

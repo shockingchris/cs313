@@ -9,7 +9,7 @@
 		$newTask = isset($_POST['newTask']) ? $_POST['newTask'] : '';
 		$people = isset($_POST['people']) ? $_POST['people'] : '';
 		$submit = $_POST['submit'];
-		$valu = isset($_POST['valu']) ? $_POST['valu'] : '';;
+		$valu = isset($_POST['valu']) ? $_POST['valu'] : '';
 	}
 	else{
 		echo "didn't submit";

@@ -1,7 +1,23 @@
 <?php include 'dbaccess.php';?>
 <?php 
 	print_r($_POST);
+	if(isset($_POST['submit'])){
+		echo "We made it submit!";
+		$salesman = isset($_POST['salesman']) ? $_POST['salesman'] : '';
+		$submit = $_POST['submit'];
+	}
+	else{
+		echo "didn't submit";
+		
+	}
 	
+	if($submit=='login'){
+		
+	}
+	
+	if($submit=='signup'){
+		header(Location="")
+	}
 	
 ?>
 <html>
@@ -26,7 +42,7 @@
 		</tr><tr>
 		<td colspan="2">
 		<button type="submit" name="submit" value="login" width="100px">Log In</button>
-		    <button type="submit" name="submit" value="signup" width="100px">Sign Up</button>
+		<a href="signup.php"><button>Sign Up</button></a>
 		</td>
 		</table>
 		</form>

@@ -19,7 +19,7 @@
 		echo password_hash($password, PASSWORD_DEFAULT). "\n";
 	}
 	else{
-		echo $password . "\n";
+		echo "{$password}" . "\n";
 	}
 	
 	if($_POST['submit']=='signup'){

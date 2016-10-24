@@ -3,7 +3,8 @@
 	print_r($_POST);
 	if(isset($_POST['submit'])){
 		echo "We made it submit!";
-		$salesman = isset($_POST['salesman']) ? $_POST['salesman'] : '';
+		$username = isset($_POST['username']) ? $_POST['username'] : '';
+		$password = isset($_POST['password']) ? $_POST['password'] : '';
 		$submit = $_POST['submit'];
 	}
 	else{
@@ -12,7 +13,7 @@
 	}
 	
 	if($submit=='login'){
-		
+		echo password_hash($password, PASSWORD_DEFAULT). "\n";
 	}
 	
 	if($submit=='signup'){

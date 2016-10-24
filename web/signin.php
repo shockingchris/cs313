@@ -16,6 +16,8 @@
 	}
 	
 	if($submit=='signup'){
+		header('Location: ' . 'signup.php', true, 303);
+		die();
 	}
 	
 ?>
@@ -41,7 +43,7 @@
 		</tr><tr>
 		<td colspan="2">
 		<button type="submit" name="submit" value="login" width="100px">Log In</button>
-		<a href="signup.php"><button>Sign Up</button></a>
+		<button type="submit" name="submit" value="signup" width="100px">Sign Up</button>
 		</td>
 		</table>
 		</form>

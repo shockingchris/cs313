@@ -16,7 +16,6 @@
 	}
 	
 	if($submit=='signup'){
-		header(Location="")
 	}
 	
 ?>

@@ -12,11 +12,11 @@
 		
 	}
 	
-	if($submit=='login'){
+	if($_POST['submit']=='login'){
 		echo password_hash($password, PASSWORD_DEFAULT). "\n";
 	}
 	
-	if($submit=='signup'){
+	if($_POST['submit']=='signup'){
 		header('Location: ' . 'signup.php', true, 303);
 		die();
 	}

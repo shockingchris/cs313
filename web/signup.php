@@ -9,12 +9,17 @@
 	}
 	else{
 		echo "didn't submit";
+		$username='';
+		$password='';
 		
 	}
 	
 	if($_POST['submit']=='login'){
 		echo "logging in";
 		echo password_hash($password, PASSWORD_DEFAULT). "\n";
+	}
+	else{
+		echo $password . "\n";
 	}
 	
 	if($_POST['submit']=='signup'){

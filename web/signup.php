@@ -8,6 +8,7 @@
 		$submit = $_POST['submit'];
 		echo $username . " " . $password . " ";
 		$hash = password_hash($password, PASSWORD_DEFAULT);
+		echo $hash;
 	}
 	else{
 		echo "didn't submit";

@@ -55,6 +55,16 @@
 		</td>
 		</table>
 		</form>
-	
+	<br><br>
+	<?php
+	if($_POST['submit']=='login'){
+		echo "logging in";
+		$hash = password_hash($password, PASSWORD_DEFAULT);
+		echo $hash . "\n";
+	}
+	else{
+		echo "{$password}" . "\n";
+	}
+	?>
 </body>
 </html>

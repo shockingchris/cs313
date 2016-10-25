@@ -16,7 +16,8 @@
 	
 	if($_POST['submit']=='login'){
 		echo "logging in";
-		echo password_hash($password, PASSWORD_DEFAULT). "\n";
+		$hash = password_hash($password, PASSWORD_DEFAULT);
+		echo $hash . "\n";
 	}
 	else{
 		echo "{$password}" . "\n";

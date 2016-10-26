@@ -6,9 +6,6 @@
 		$username = isset($_POST['username']) ? $_POST['username'] : '';
 		$password = isset($_POST['password']) ? $_POST['password'] : '';
 		$submit = $_POST['submit'];
-		echo $username . " " . $password . " ";
-		$hash = password_hash($password, PASSWORD_DEFAULT);
-		echo $hash;
 	}
 	else{
 		echo "didn't submit";

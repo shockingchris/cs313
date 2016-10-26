@@ -5,6 +5,7 @@
 		echo "We made it submit!";
 		$username = isset($_POST['username']) ? $_POST['username'] : '';
 		$password = isset($_POST['password']) ? $_POST['password'] : '';
+		$passcheck = isset($_POST['passcheck']) ? $_POST['passcheck'] : '';
 		$submit = $_POST['submit'];
 	}
 	else{
@@ -15,9 +16,11 @@
 	}
 	
 	if($_POST['submit']=='login'){
-		echo "logging in";
-		$hash = password_hash($password, PASSWORD_DEFAULT);
-		echo $hash . "\n";
+		if($password == $passcheck){
+			echo "logging in";
+			$hash = password_hash($password, PASSWORD_DEFAULT);
+			echo $hash . "\n";
+		}
 	}
 	else{
 		echo "{$password}" . "\n";
@@ -48,6 +51,10 @@
 		</tr><tr>
 		<td>Password:</td>
 		<td><input type="password" name="pass" size="15"/></td>
+		</tr>
+		<td>Password:</td>
+		<td><input type="password" name="passcheck" size="15"/></td>
+		<tr>
 		</tr><tr>
 		<td colspan="2">
 		<button type="submit" name="submit" value="login" width="100px">Log In</button>

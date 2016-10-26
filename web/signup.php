@@ -4,7 +4,7 @@
 	if(isset($_POST['submit'])){
 		echo "We made it submit!";
 		$username = isset($_POST['username']) ? $_POST['username'] : '';
-		$password = isset($_POST['password']) ? $_POST['password'] : '';
+		$pass = isset($_POST['pass']) ? $_POST['pass'] : '';
 		$passcheck = isset($_POST['passcheck']) ? $_POST['passcheck'] : '';
 		$submit = $_POST['submit'];
 	}
@@ -16,9 +16,9 @@
 	}
 	
 	if($_POST['submit']=='login'){
-		if($password === $passcheck){
+		if($pass == $passcheck){
 			echo "logging in";
-			$hash = password_hash($password, PASSWORD_DEFAULT);
+			$hash = password_hash($pass, PASSWORD_DEFAULT);
 			echo $hash . "\n";
 		}
 	}

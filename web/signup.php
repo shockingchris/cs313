@@ -51,7 +51,7 @@ if (!empty($_POST['username'])) {
 		$hash = password_hash($pass, PASSWORD_BCRYPT);
 		echo $hash;
 		// Insert username and hash into the database
-		$query = "INSERT INTO users "
+		$query = "INSERT INTO login "
 		. "(username, password)"
 		. "VALUES ('$username', '$hash')";
 		$db->query($query);

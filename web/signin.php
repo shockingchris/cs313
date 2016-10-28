@@ -23,7 +23,7 @@
 
 		echo $pass;
 		// Check if password is correct
-		$query = "SELECT id, password FROM users WHERE username = '$username'";
+		$query = "SELECT id, password FROM login WHERE username = '$username'";
 		$user_info = $db->query($query)->fetch();
 		
 		if (password_verify($pass, $user_info['password'])) {

@@ -33,7 +33,7 @@ function valid_password($pass) {
 
 if (!empty($_POST['username'])) {
 	$username = filter_input(INPUT_POST, 'username');
-	$pass = filter_input(INPUT_POST, 'password');
+	$pass = filter_input(INPUT_POST, 'pass');
 	$passcheck = filter_input(INPUT_POST, 'passcheck');
 
 	if ($pass !== $passcheck) {

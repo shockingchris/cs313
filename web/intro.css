@@ -59,7 +59,6 @@ li{
 .main {
     position: absolute;
     left:165px; top:50px; right:0; bottom:0;
-	overflow: auto;
 	height: 100%;
 }
 

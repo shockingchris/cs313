@@ -59,6 +59,7 @@ if (!empty($_POST['username'])) {
 		header("Location: signin.php");
 	}
 }
+}
 ?>
 
 <html>

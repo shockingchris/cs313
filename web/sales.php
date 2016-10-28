@@ -1,7 +1,7 @@
 <?php include 'dbaccess.php';?>
 <?php
 	if(isset($_POST['submit'])){
-		echo "We made it submit!";
+		//echo "We made it submit!";
 		$salesman = isset($_POST['salesman']) ? $_POST['salesman'] : '';
 		$newperson = isset($_POST['newperson']) ? $_POST['newperson'] : '';
 		$deletedPerson = isset($_POST['deletedPerson']) ? $_POST['deletedPerson'] : '';
@@ -12,7 +12,7 @@
 		$valu = isset($_POST['valu']) ? $_POST['valu'] : '';
 	}
 	else{
-		echo "didn't submit";
+		//echo "didn't submit";
 		$salesman = '';
 		$incentive ='';
 		$newId='';
@@ -54,12 +54,7 @@
 <div class="top"><?php include 'topnavbars.php';?></div>
 <div class="left"><?php include 'leftnavbars.php';?></div>
 <div class="main">
-<?php print_r($_POST);
-	echo"<br>";
-	if(isset($submit)){
-		echo $submit;
-	}
-?>
+
 <h1>Salesman Information</h1>
 <br/>
 Following Salesman available to search info:<br>

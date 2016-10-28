@@ -33,7 +33,7 @@
     </div>
     <div class="main">
 	    <h1>CS313 Assignments</h1>
-	    <p>
+	    <p style="text-align:center">
 		Notes: This is the central page for all of my php/PostGreSQL.<br><br>
 		On the Left you will be able to reach my different assignments.<br><br>
 		The Survey illustrates the ability to use sessions and form actions<br><br>

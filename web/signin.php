@@ -1,27 +1,25 @@
 <?php include 'dbaccess.php';?>
 <?php
 
-	print_r($_POST);
+	//print_r($_POST);
 	if(isset($_POST['submit'])){
-		echo "We made it submit!";
+		//echo "We made it submit!";
 		$submit = $_POST['submit'];
 	}
 	else{
-		echo "didn't submit";
+		//echo "didn't submit";
 		
 	}
 	if($submit=='login'){
 		$lifetime = 3600 * 24 * 365;
 		session_set_cookie_params($lifetime, '/');
 		session_start();
-		echo $lifetime;
 		
 	if (!empty($_POST['username'])) {
 		// Get the username and password
 		$username = filter_input(INPUT_POST, 'username');
 		$pass = filter_input(INPUT_POST, 'pass');
 
-		echo $pass;
 		// Check if password is correct
 		$query = "SELECT id, password FROM login WHERE username = '$username'";
 		$user_info = $db->query($query)->fetch();
@@ -51,7 +49,7 @@
 		<form action='' method='POST'>
 		<table align="center" class="responstable">
 		<tr>
-		<th colspan="2">Enter a Username and Password</th>
+		<th colspan="2">Enter Your Username and Password</th>
 		</tr><tr>
 		<td>Username:</td>
 		<td><input type="text" name="username" size="15"/></td>

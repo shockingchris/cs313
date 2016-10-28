@@ -19,7 +19,7 @@
 			<ul class="leftbar">
 				<li class="leftlist"><a href="index.php">Assignments Page</a></li>
 				<li class="leftlist"><a href="survey.php" class="active">Week 02</a></li>
-				<li class="leftlist"><a>Week 03</a></li>
+				<li class="leftlist"><a href="sales.php">Sales Table</a></li>
 				<li class="leftlist"><a>Week 04</a></li>
 				<li class="leftlist"><a>Week 05</a></li>
 				<li class="leftlist"><a>Week 06</a></li>

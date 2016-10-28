@@ -4,23 +4,24 @@
 	print_r($_POST);
 	if(isset($_POST['submit'])){
 		echo "We made it submit!";
-		$salesman = isset($_POST['salesman']) ? $_POST['salesman'] : '';
 		$submit = $_POST['submit'];
 	}
 	else{
 		echo "didn't submit";
 		
 	}
-	if($_POST['submit']=='login'){
+	if($submit=='login'){
 		$lifetime = 3600 * 24 * 365;
 		session_set_cookie_params($lifetime, '/');
 		session_start();
-
+		echo $lifetime;
+		
 	if (!empty($_POST['username'])) {
 		// Get the username and password
 		$username = filter_input(INPUT_POST, 'username');
 		$pass = filter_input(INPUT_POST, 'pass');
 
+		echo $pass;
 		// Check if password is correct
 		$query = "SELECT id, password FROM users WHERE username = '$username'";
 		$user_info = $db->query($query)->fetch();

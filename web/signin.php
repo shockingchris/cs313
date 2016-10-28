@@ -11,11 +11,27 @@
 		echo "didn't submit";
 		
 	}
-	
-	if($submit=='login'){
+	if($_POST['submit']=='login'){
+		$lifetime = 3600 * 24 * 365;
+		session_set_cookie_params($lifetime, '/');
+		session_start();
+
+	if (!empty($_POST['username'])) {
+		// Get the username and password
+		$username = filter_input(INPUT_POST, 'username');
+		$pass = filter_input(INPUT_POST, 'pass');
+
+		// Check if password is correct
+		$query = "SELECT id, password FROM users WHERE username = '$username'";
+		$user_info = $db->query($query)->fetch();
 		
+		if (password_verify($pass, $user_info['password'])) {
+			$_SESSION['user_id'] = $user_info['id'];
+			$_SESSION['username'] = $username;
+			header("Location: homepage.html");
+		}
+		}
 	}
-	
 	if($submit=='signup'){
 		header('Location: ' . 'signup.php', true, 303);
 		die();

@@ -46,9 +46,10 @@ if (!empty($_POST['username'])) {
 		$error = "Password can't be blank";
 	}
 	else {
+		echo "<br>" . $username  . " " . $pass . ' ';
 		// Hash the password
 		$hash = password_hash($pass, PASSWORD_BCRYPT);
-
+		echo $hash;
 		// Insert username and hash into the database
 		$query = "INSERT INTO users "
 		. "(username, password)"

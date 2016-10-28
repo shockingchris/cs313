@@ -1,6 +1,6 @@
 <?php
     echo'<ul class="leftbar">';
-    echo'<li class="leftlist"><a href="index.html">Assignments Page</a></li>';
+    echo'<li class="leftlist"><a href="index.php">Assignments Page</a></li>';
     echo'<li class="leftlist"><a href="survey.php">Survey</a></li>';
 	echo'<li class="leftlist"><a href="sales.php" class="active">Sales Table</a></li>';
 	echo'<li class="leftlist"><a>Week 04</a></li>';

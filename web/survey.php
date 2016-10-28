@@ -21,7 +21,7 @@
 	
 		<div class="left">
 			<ul class="leftbar">
-				<li class="leftlist"><a href="index.html">Assignments Page</a></li>
+				<li class="leftlist"><a href="index.php">Assignments Page</a></li>
 				<li class="leftlist"><a href="survey.php" class="active">Week 02</a></li>
 				<li class="leftlist"><a>Week 03</a></li>
 				<li class="leftlist"><a>Week 04</a></li>

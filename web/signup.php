@@ -11,26 +11,54 @@
 	else{
 		echo "didn't submit";
 		$username='';
-		$password='';
-		
-	}
-	
-	if($_POST['submit']=='login'){
-		if($pass == $passcheck){
-			echo "logging in</br>";
-			$hash = password_hash($pass, PASSWORD_DEFAULT);
-			echo $hash . "\n";
-		}
-	}
-	else{
-		echo "{$password}" . "\n";
+		$pass='';
+		$passcheck='';
 	}
 	
 	if($_POST['submit']=='signup'){
-		header('Location: ' . 'signup.php', true, 303);
-		die();
-	}
 	
+function valid_password($pass) {
+	$pass_array = str_split($pass);
+
+	if (count($pass_array) < 7) {
+		return false;
+	}
+
+	if (preg_match('/[A-Za-z]/', $pass) && preg_match('/[0-9]/', $pass)) { 
+		return true; 
+	}
+
+		return false;
+}
+
+if (!empty($_POST['username'])) {
+$username = filter_input(INPUT_POST, 'username');
+$pass = filter_input(INPUT_POST, 'password');
+$confirm = filter_input(INPUT_POST, 'confirm');
+
+if ($pass !== $passcheck) {
+$error = "Both password fields must match";
+}
+else if (!valid_password($pass)) {
+$error = "Password must contain at least 7 characters and at least one number";
+}
+else if (empty($pass)) {
+$error = "Password can't be blank";
+}
+else {
+// Hash the password
+$hash = password_hash($pass, PASSWORD_BCRYPT);
+
+// Insert username and hash into the database
+$query = "INSERT INTO users "
+. "(username, password)"
+. "VALUES ('$username', '$hash')";
+$db->query($query);
+
+// Redirect to sign-in page
+header("Location: signin.php");
+}
+}
 ?>
 <html>
   <head>
@@ -40,6 +68,9 @@
 	<link rel="stylesheet" href="/table.css"/>
 </head>
   <body>
+	<?php if (isset($error) && $error != ''): ?>
+    <p style="color:red;"><?php echo $error; ?></p>
+    <?php endif; ?>
 	<h2>Sign Up You Lameos!</h2>
 		<form action='' method='POST'>
 		<table align="center" class="responstable">
@@ -57,8 +88,7 @@
 		<tr>
 		</tr><tr>
 		<td colspan="2">
-		<button type="submit" name="submit" value="login" width="100px">Log In</button>
-		<button type="submit" name="submit" value="signup" width="100px">Sign Up</button>
+		<button type="submit" name="submit" value="signup" width="100px">Save</button>
 		</td>
 		</table>
 		</form>

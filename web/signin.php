@@ -1,5 +1,6 @@
 <?php include 'dbaccess.php';?>
-<?php 
+<?php
+
 	print_r($_POST);
 	if(isset($_POST['submit'])){
 		echo "We made it submit!";

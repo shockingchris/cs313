@@ -32,34 +32,35 @@ function valid_password($pass) {
 }
 
 if (!empty($_POST['username'])) {
-$username = filter_input(INPUT_POST, 'username');
-$pass = filter_input(INPUT_POST, 'password');
-$confirm = filter_input(INPUT_POST, 'confirm');
+	$username = filter_input(INPUT_POST, 'username');
+	$pass = filter_input(INPUT_POST, 'password');
+	$passcheck = filter_input(INPUT_POST, 'passcheck');
 
-if ($pass !== $passcheck) {
-$error = "Both password fields must match";
-}
-else if (!valid_password($pass)) {
-$error = "Password must contain at least 7 characters and at least one number";
-}
-else if (empty($pass)) {
-$error = "Password can't be blank";
-}
-else {
-// Hash the password
-$hash = password_hash($pass, PASSWORD_BCRYPT);
+	if ($pass !== $passcheck) {
+		$error = "Both password fields must match";
+	}
+	else if (!valid_password($pass)) {
+		$error = "Password must contain at least 7 characters and at least one number";
+	}
+	else if (empty($pass)) {
+		$error = "Password can't be blank";
+	}
+	else {
+		// Hash the password
+		$hash = password_hash($pass, PASSWORD_BCRYPT);
 
-// Insert username and hash into the database
-$query = "INSERT INTO users "
-. "(username, password)"
-. "VALUES ('$username', '$hash')";
-$db->query($query);
+		// Insert username and hash into the database
+		$query = "INSERT INTO users "
+		. "(username, password)"
+		. "VALUES ('$username', '$hash')";
+		$db->query($query);
 
-// Redirect to sign-in page
-header("Location: signin.php");
-}
+		// Redirect to sign-in page
+		header("Location: signin.php");
+	}
 }
 ?>
+
 <html>
   <head>
 <head>

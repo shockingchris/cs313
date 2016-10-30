@@ -1,6 +1,6 @@
 <?php include 'dbaccess.php';?>
 <?php
-	if(!isset($_SESSION['loggedin']){
+	if(!isset($_SESSION['loggedin'])){
 		header("Location: " . "signin.php", true, 303);
 		die();
 	}

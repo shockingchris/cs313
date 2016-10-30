@@ -1,13 +1,5 @@
 <?php include 'dbaccess.php';?>
 <?php
-	if(!isset($_SESSION['loggedin'])){
-		header("Location: " . "signin.php", true, 303);
-		die();
-	}
-	else{
-		header("Location: " . "homepage.php", true, 303);
-		die();
-	}
 	//print_r($_POST);
 	if(isset($_POST['submit'])){
 		//echo "We made it submit!";

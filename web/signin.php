@@ -46,7 +46,7 @@
 	<link rel="stylesheet" href="/table.css"/>
 </head>
   <body>
-	<h2>Welcome Lameos!</h2>
+	<h2>Welcome Wonderful People!</h2>
 		<form action='' method='POST'>
 		<table align="center" class="responstable">
 		<tr>

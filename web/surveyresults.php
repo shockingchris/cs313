@@ -1,11 +1,3 @@
-<?php
-	if(!isset($_SESSION['loggedin'])){
-		header("Location: " . "signin.php", true, 303);
-		die();
-	}
-	
-	session_start();
-?>
 <html lang="en">
 	<head>
 		<title>Results</title>

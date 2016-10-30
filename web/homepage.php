@@ -1,9 +1,3 @@
-<?php
-	if(!isset($_SESSION['loggedin'])){
-		header("Location: " . "signin.php", true, 303);
-		die();
-	}
-?>
 <html>
   <head>
     <meta charset="utf-8"/>

@@ -1,5 +1,5 @@
 <?php
-	if(!isset($_SESSION['loggedin']){
+	if(!isset($_SESSION['loggedin'])){
 		header("Location: " . "signin.php", true, 303);
 		die();
 	}
@@ -14,7 +14,7 @@
     <body>
 		<div class="top">
 			<ul class="topbar">
-				<li class="toplist"><a href="homepage.html">Home Page</a></li>
+				<li class="toplist"><a href="homepage.php">Home Page</a></li>
 				<li class="toplist"><a>Games</a></li>
 				<li style="float:right" class="toplist"><a>Login</a></li>
             </ul>

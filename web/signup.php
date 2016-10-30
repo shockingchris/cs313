@@ -1,6 +1,6 @@
 <?php include 'dbaccess.php';?>
 <?php 
-	print_r($_POST);
+	//print_r($_POST);
 	if(isset($_POST['submit'])){
 		echo "We made it submit!";
 		$username = isset($_POST['username']) ? $_POST['username'] : '';

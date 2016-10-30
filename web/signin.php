@@ -28,7 +28,7 @@
 			if (password_verify($pass, $user_info['password'])) {
 				$_SESSION['user_id'] = $user_info['id'];
 				$_SESSION['username'] = $username;
-				header("Location: homepage.html");
+				header("Location: homepage.php");
 			}
 		}
 	}

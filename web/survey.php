@@ -1,4 +1,9 @@
 <?php
+	if(!isset($_SESSION['loggedin']){
+		header("Location: " . "signin.php", true, 303);
+		die();
+	}
+	
 	session_start();
 	
 	if(isset($_SESSION['taken'])){

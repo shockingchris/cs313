@@ -1,5 +1,10 @@
 <?php include 'dbaccess.php';?>
 <?php
+	if(!isset($_SESSION['loggedin']){
+		header("Location: " . "signin.php", true, 303);
+		die();
+	}
+
 	if(isset($_POST['submit'])){
 		//echo "We made it submit!";
 		$salesman = isset($_POST['salesman']) ? $_POST['salesman'] : '';
